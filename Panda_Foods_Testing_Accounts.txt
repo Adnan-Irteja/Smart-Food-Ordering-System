@@ -5,7 +5,7 @@ CUSTOMER ACCOUNTS
 -----------------
 
 1. Customer1
-   Username: c1
+   Username: customer1
    Password: c1
 
 2. Customer2
