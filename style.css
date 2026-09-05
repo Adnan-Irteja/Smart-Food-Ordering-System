@@ -1,0 +1,10527 @@
+/* Import Playfair Display */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&display=swap');
+
+
+/* =========================
+   GENERAL PAGE
+   ========================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #202020;
+}
+
+.login-page {
+    min-height: 100vh;
+
+    background-color: #f5f5f5;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* Reduced from 40px to prevent scrolling */
+    padding: 20px;
+}
+
+
+/* =========================
+   MAIN ORANGE CONTAINER
+   ========================= */
+
+.login-shell {
+    width: min(1180px, 100%);
+
+    /*
+       Allows it to fit comfortably inside a
+       1920x1080 browser window without scrolling.
+    */
+    min-height: 720px;
+    max-height: calc(100vh - 40px);
+
+    background-color: #ff7a21;
+
+    border-radius: 75px;
+
+    display: grid;
+    grid-template-columns: 1.25fr 0.85fr;
+
+    align-items: center;
+
+    gap: 70px;
+
+    padding: 60px 90px;
+}
+
+
+/* =========================
+   LEFT BRANDING AREA
+   ========================= */
+
+.login-branding {
+    max-width: 480px;
+
+    font-family: "Playfair Display", Georgia, serif;
+}
+
+
+/* Panda Foods */
+
+.brand-label {
+    margin: 0 0 18px;
+
+    font-family: "Playfair Display", Georgia, serif;
+
+    font-size: 23px;
+    font-weight: 700;
+
+    letter-spacing: 0.5px;
+}
+
+
+/* Good food, made easy. */
+
+.login-branding h1 {
+    margin: 0;
+
+    font-family: "Playfair Display", Georgia, serif;
+
+    font-size: clamp(52px, 5.5vw, 76px);
+    font-weight: 800;
+
+    line-height: 1.05;
+
+    letter-spacing: -1.5px;
+}
+
+
+/* Description underneath */
+
+.brand-description {
+    max-width: 420px;
+
+    margin: 25px 0 0;
+
+    font-family: "Playfair Display", Georgia, serif;
+
+    font-size: 18px;
+    font-weight: 500;
+
+    line-height: 1.55;
+}
+
+
+/* =========================
+   LOGIN CARD
+   ========================= */
+
+.login-card {
+    width: 100%;
+    max-width: 420px;
+
+    justify-self: end;
+
+    background-color: white;
+
+    border-radius: 28px;
+
+    padding: 38px 40px;
+
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.12);
+}
+
+
+/* =========================
+   LOGIN CARD HEADING
+   ========================= */
+
+.login-card-heading {
+    margin-bottom: 28px;
+
+    text-align: center;
+}
+
+.login-card-heading h2 {
+    margin: 0 0 8px;
+
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.login-card-heading p {
+    margin: 0;
+
+    color: #666666;
+
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+
+/* =========================
+   INVALID LOGIN MESSAGE
+   ========================= */
+
+.login-error {
+    margin-bottom: 18px;
+
+    padding: 11px 14px;
+
+    background-color: #fff0ea;
+
+    border: 1px solid #ffb08a;
+    border-radius: 9px;
+
+    color: #b33b00;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    text-align: center;
+}
+
+
+/* =========================
+   CUSTOMER / RESTAURANT
+   ROLE SWITCH
+   ========================= */
+
+.role-switch {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    background-color: #eeeeee;
+
+    border-radius: 12px;
+
+    padding: 5px;
+
+    margin-bottom: 28px;
+}
+
+.role-switch input[type="radio"] {
+    display: none;
+}
+
+.role-switch label {
+    padding: 11px 10px;
+
+    border-radius: 9px;
+
+    text-align: center;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    color: #555555;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.role-switch input[type="radio"]:checked + label {
+    background-color: white;
+
+    color: #111111;
+
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+}
+
+.role-switch label:hover {
+    color: #111111;
+}
+
+
+/* =========================
+   FORM FIELDS
+   ========================= */
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.form-group input {
+    width: 100%;
+
+    padding: 14px 15px;
+
+    border: 1px solid #d2d2d2;
+    border-radius: 10px;
+
+    background-color: white;
+
+    font-size: 15px;
+
+    outline: none;
+
+    transition: 0.2s;
+}
+
+.form-group input:focus {
+    border-color: #ff7a21;
+
+    box-shadow: 0 0 0 3px rgba(255, 122, 33, 0.12);
+}
+
+.form-group input::placeholder {
+    color: #999999;
+}
+
+
+/* =========================
+   SIGN IN BUTTON
+   ========================= */
+
+.primary-button {
+    width: 100%;
+
+    margin-top: 5px;
+
+    padding: 14px;
+
+    border: none;
+    border-radius: 10px;
+
+    background-color: #202020;
+
+    color: white;
+
+    font-size: 15px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.primary-button:hover {
+    background-color: #000000;
+
+    transform: translateY(-1px);
+}
+
+.primary-button:active {
+    transform: translateY(0);
+}
+
+
+/* =========================
+   SIGNUP SECTION
+   ========================= */
+
+.signup-section {
+    margin-top: 30px;
+
+    padding-top: 25px;
+
+    border-top: 1px solid #dddddd;
+}
+
+.signup-section p {
+    margin: 8px 0;
+
+    color: #666666;
+
+    font-size: 14px;
+}
+
+.signup-section a {
+    color: #e65300;
+
+    font-weight: 700;
+
+    text-decoration: none;
+}
+
+.signup-section a:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================
+   RESPONSIVE DESIGN
+   ========================= */
+
+@media (max-width: 900px) {
+
+    .login-page {
+        align-items: flex-start;
+    }
+
+    .login-shell {
+        grid-template-columns: 1fr;
+
+        min-height: auto;
+        max-height: none;
+
+        gap: 45px;
+
+        padding: 55px 60px;
+
+        border-radius: 50px;
+    }
+
+    .login-branding {
+        max-width: 100%;
+
+        text-align: center;
+    }
+
+    .brand-description {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .login-card {
+        justify-self: center;
+    }
+}
+
+
+/* =========================
+   MOBILE
+   ========================= */
+
+@media (max-width: 650px) {
+
+    .login-page {
+        padding: 15px;
+    }
+
+    .login-shell {
+        padding: 45px 20px;
+
+        border-radius: 30px;
+    }
+
+    .login-branding h1 {
+        font-size: 46px;
+    }
+
+    .brand-label {
+        font-size: 20px;
+    }
+
+    .brand-description {
+        font-size: 16px;
+    }
+
+    .login-card {
+        padding: 30px 22px;
+
+        border-radius: 22px;
+    }
+
+    .login-card-heading h2 {
+        font-size: 27px;
+    }
+}
+
+/* =========================
+   ANIMATED BACKGROUND
+   ========================= */
+
+.background-particles {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    overflow: hidden;
+
+    pointer-events: none;
+
+    z-index: 0;
+}
+
+.login-shell {
+    position: relative;
+    z-index: 1;
+}
+
+
+/* =========================
+   GENERAL PARTICLES
+   ========================= */
+
+.particle {
+    position: absolute;
+
+    display: block;
+
+    opacity: 0.52;
+
+    animation-name: particleMove;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+
+/* =========================
+   SHAPES
+   ========================= */
+
+.circle {
+    width: 22px;
+    height: 22px;
+
+    background-color: #c5c5c5;
+
+    border-radius: 50%;
+}
+
+
+.circle-outline {
+    width: 42px;
+    height: 42px;
+
+    border: 2px solid #cfcfcf;
+
+    border-radius: 50%;
+}
+
+
+.square {
+    width: 23px;
+    height: 23px;
+
+    background-color: #d0d0d0;
+}
+
+
+.triangle {
+    width: 0;
+    height: 0;
+
+    border-left: 13px solid transparent;
+    border-right: 13px solid transparent;
+
+    border-bottom: 23px solid #cdcdcd;
+}
+
+
+.dot {
+    width: 10px;
+    height: 10px;
+
+    background-color: #bdbdbd;
+
+    border-radius: 50%;
+}
+
+
+.diamond {
+    width: 18px;
+    height: 18px;
+
+    background-color: #d2d2d2;
+
+    transform: rotate(45deg);
+}
+
+
+/* =========================
+   CONNECTING / DIAGONAL
+   LINES
+   ========================= */
+
+.particle-line {
+    position: absolute;
+
+    display: block;
+
+    width: 220px;
+    height: 1px;
+
+    background-color: rgba(170, 170, 170, 0.28);
+
+    transform-origin: left center;
+
+    animation-name: lineMove;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+.line1 {
+    top: 12%;
+    left: -10%;
+
+    width: 280px;
+
+    transform: rotate(-25deg);
+
+    animation-duration: 40s;
+}
+
+.line2 {
+    top: 30%;
+    left: 8%;
+
+    width: 180px;
+
+    transform: rotate(22deg);
+
+    animation-duration: 46s;
+    animation-delay: -15s;
+}
+
+.line3 {
+    top: 72%;
+    left: -5%;
+
+    width: 250px;
+
+    transform: rotate(-18deg);
+
+    animation-duration: 44s;
+    animation-delay: -25s;
+}
+
+.line4 {
+    top: 18%;
+    left: 68%;
+
+    width: 230px;
+
+    transform: rotate(30deg);
+
+    animation-duration: 48s;
+    animation-delay: -12s;
+}
+
+.line5 {
+    top: 62%;
+    left: 76%;
+
+    width: 300px;
+
+    transform: rotate(-28deg);
+
+    animation-duration: 42s;
+    animation-delay: -20s;
+}
+
+.line6 {
+    top: 88%;
+    left: 35%;
+
+    width: 210px;
+
+    transform: rotate(15deg);
+
+    animation-duration: 50s;
+    animation-delay: -32s;
+}
+
+
+/* =========================
+   PARTICLE POSITIONS
+   ========================= */
+
+.p1 {
+    top: 8%;
+    left: -4%;
+
+    animation-duration: 34s;
+}
+
+.p2 {
+    top: 22%;
+    left: 5%;
+
+    animation-duration: 39s;
+    animation-delay: -15s;
+}
+
+.p3 {
+    top: 75%;
+    left: -6%;
+
+    width: 30px;
+    height: 30px;
+
+    animation-duration: 42s;
+    animation-delay: -22s;
+}
+
+.p4 {
+    top: 87%;
+    left: 20%;
+
+    animation-duration: 38s;
+    animation-delay: -10s;
+}
+
+.p5 {
+    top: 45%;
+    left: 90%;
+
+    animation-duration: 45s;
+    animation-delay: -28s;
+}
+
+
+.p6 {
+    top: 5%;
+    left: 25%;
+
+    animation-duration: 45s;
+    animation-delay: -20s;
+}
+
+.p7 {
+    top: 15%;
+    left: 88%;
+
+    width: 52px;
+    height: 52px;
+
+    animation-duration: 48s;
+    animation-delay: -12s;
+}
+
+.p8 {
+    top: 72%;
+    left: 76%;
+
+    animation-duration: 43s;
+    animation-delay: -30s;
+}
+
+.p9 {
+    top: 86%;
+    left: 5%;
+
+    width: 34px;
+    height: 34px;
+
+    animation-duration: 41s;
+    animation-delay: -17s;
+}
+
+
+.p10 {
+    top: 3%;
+    left: 6%;
+
+    animation-duration: 38s;
+    animation-delay: -10s;
+}
+
+.p11 {
+    top: 28%;
+    left: 17%;
+
+    width: 17px;
+    height: 17px;
+
+    animation-duration: 44s;
+    animation-delay: -28s;
+}
+
+.p12 {
+    top: 70%;
+    left: 62%;
+
+    animation-duration: 47s;
+    animation-delay: -30s;
+}
+
+.p13 {
+    top: 90%;
+    left: 90%;
+
+    width: 28px;
+    height: 28px;
+
+    animation-duration: 40s;
+    animation-delay: -15s;
+}
+
+
+.p14 {
+    top: 12%;
+    left: 95%;
+
+    animation-duration: 42s;
+    animation-delay: -12s;
+}
+
+.p15 {
+    top: 35%;
+    left: 2%;
+
+    animation-duration: 35s;
+    animation-delay: -24s;
+}
+
+.p16 {
+    top: 68%;
+    left: 88%;
+
+    animation-duration: 39s;
+    animation-delay: -18s;
+}
+
+.p17 {
+    top: 82%;
+    left: 42%;
+
+    animation-duration: 46s;
+    animation-delay: -31s;
+}
+
+
+.p18 {
+    top: 15%;
+    left: 12%;
+
+    animation-duration: 30s;
+    animation-delay: -8s;
+}
+
+.p19 {
+    top: 90%;
+    left: 45%;
+
+    animation-duration: 46s;
+    animation-delay: -18s;
+}
+
+.p20 {
+    top: 33%;
+    left: 80%;
+
+    animation-duration: 36s;
+    animation-delay: -27s;
+}
+
+.p21 {
+    top: 57%;
+    left: 6%;
+
+    animation-duration: 43s;
+    animation-delay: -14s;
+}
+
+.p22 {
+    top: 8%;
+    left: 60%;
+
+    animation-duration: 37s;
+    animation-delay: -25s;
+}
+
+.p23 {
+    top: 78%;
+    left: 95%;
+
+    animation-duration: 41s;
+    animation-delay: -9s;
+}
+
+
+.p24 {
+    top: 52%;
+    left: 3%;
+
+    animation-duration: 43s;
+    animation-delay: -14s;
+}
+
+.p25 {
+    top: 82%;
+    left: 84%;
+
+    animation-duration: 50s;
+    animation-delay: -34s;
+}
+
+.p26 {
+    top: 18%;
+    left: 72%;
+
+    width: 14px;
+    height: 14px;
+
+    animation-duration: 40s;
+    animation-delay: -19s;
+}
+
+
+/* =========================
+   PARTICLE MOVEMENT
+   ========================= */
+
+@keyframes particleMove {
+
+    0% {
+        transform: translateX(-120px)
+                   translateY(0)
+                   rotate(0deg);
+    }
+
+    25% {
+        transform: translateX(30vw)
+                   translateY(-12px)
+                   rotate(90deg);
+    }
+
+    50% {
+        transform: translateX(58vw)
+                   translateY(10px)
+                   rotate(180deg);
+    }
+
+    75% {
+        transform: translateX(85vw)
+                   translateY(-8px)
+                   rotate(270deg);
+    }
+
+    100% {
+        transform: translateX(115vw)
+                   translateY(6px)
+                   rotate(360deg);
+    }
+}
+
+
+/* =========================
+   LINE MOVEMENT
+   ========================= */
+
+@keyframes lineMove {
+
+    0% {
+        translate: -150px 0;
+        opacity: 0.15;
+    }
+
+    20% {
+        opacity: 0.32;
+    }
+
+    80% {
+        opacity: 0.32;
+    }
+
+    100% {
+        translate: 115vw 0;
+        opacity: 0.15;
+    }
+}
+
+
+/* =========================
+   REDUCED MOTION
+   ========================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .particle,
+    .particle-line {
+        animation: none;
+    }
+}
+
+
+/* =========================================================
+   CUSTOMER / RESTAURANT SIGNUP PAGES
+   ========================================================= */
+
+
+/* =========================
+   SIGNUP PAGE
+   ========================= */
+
+.signup-page {
+    min-height: 100vh;
+
+    background-color: #f5f5f5;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 20px;
+}
+
+
+/* =========================
+   MAIN ORANGE CONTAINER
+   ========================= */
+
+.signup-shell {
+    position: relative;
+    z-index: 1;
+
+    width: min(1380px, 100%);
+
+    min-height: 760px;
+
+    background-color: #ff7a21;
+
+    border-radius: 75px;
+
+    display: grid;
+
+    grid-template-columns: 0.8fr 1.2fr;
+
+    align-items: center;
+
+    gap: 60px;
+
+    padding: 55px 75px;
+}
+
+
+/* =========================
+   LEFT BRANDING AREA
+   ========================= */
+
+.signup-branding {
+    max-width: 430px;
+
+    font-family: "Playfair Display", Georgia, serif;
+}
+
+
+.signup-branding .brand-label {
+    margin-bottom: 18px;
+}
+
+
+.signup-branding h1 {
+    margin: 0;
+
+    font-family: "Playfair Display", Georgia, serif;
+
+    font-size: clamp(48px, 4.5vw, 68px);
+
+    font-weight: 800;
+
+    line-height: 1.05;
+
+    letter-spacing: -1.5px;
+}
+
+
+.signup-branding .brand-description {
+    max-width: 390px;
+
+    margin-top: 25px;
+}
+
+
+/* =========================
+   SIGNUP CARD
+   ========================= */
+
+.signup-card {
+    width: 100%;
+
+    max-width: 720px;
+
+    justify-self: end;
+
+    background-color: white;
+
+    border-radius: 28px;
+
+    padding: 32px 38px;
+
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.12);
+}
+
+
+/* =========================
+   SIGNUP CARD HEADING
+   ========================= */
+
+.signup-card-heading {
+    text-align: center;
+
+    margin-bottom: 24px;
+}
+
+
+.signup-card-heading h2 {
+    margin: 0 0 7px;
+
+    font-size: 29px;
+
+    font-weight: 700;
+}
+
+
+.signup-card-heading p {
+    margin: 0;
+
+    color: #666666;
+
+    font-size: 15px;
+}
+
+
+/* =========================
+   SIGNUP ERROR
+   ========================= */
+
+.signup-error {
+    margin-bottom: 20px;
+
+    padding: 11px 14px;
+
+    background-color: #fff0ea;
+
+    border: 1px solid #ffb08a;
+
+    border-radius: 9px;
+
+    color: #b33b00;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    text-align: center;
+}
+
+
+/* =========================
+   TWO-COLUMN FORM
+   ========================= */
+
+.signup-grid {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 17px 20px;
+}
+
+
+/* =========================
+   SIGNUP FORM FIELDS
+   ========================= */
+
+.signup-form-group {
+    min-width: 0;
+}
+
+
+.signup-form-group label {
+    display: block;
+
+    margin-bottom: 7px;
+
+    font-size: 13px;
+
+    font-weight: 600;
+}
+
+
+.signup-form-group input,
+.signup-form-group select {
+    width: 100%;
+
+    height: 46px;
+
+    padding: 0 13px;
+
+    background-color: white;
+
+    border: 1px solid #d2d2d2;
+
+    border-radius: 9px;
+
+    color: #202020;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 14px;
+
+    outline: none;
+
+    transition: 0.2s;
+}
+
+
+.signup-form-group input:focus,
+.signup-form-group select:focus {
+    border-color: #ff7a21;
+
+    box-shadow: 0 0 0 3px rgba(255, 122, 33, 0.12);
+}
+
+
+.signup-form-group input::placeholder {
+    color: #999999;
+}
+
+
+/* =========================
+   CREATE ACCOUNT BUTTON
+   ========================= */
+
+.signup-button {
+    width: 100%;
+
+    margin-top: 24px;
+
+    padding: 14px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background-color: #202020;
+
+    color: white;
+
+    font-size: 15px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+
+.signup-button:hover {
+    background-color: #000000;
+
+    transform: translateY(-1px);
+}
+
+
+.signup-button:active {
+    transform: translateY(0);
+}
+
+
+/* =========================
+   SIGN IN LINK
+   ========================= */
+
+.signup-login-link {
+    margin-top: 20px;
+
+    padding-top: 18px;
+
+    border-top: 1px solid #dddddd;
+
+    text-align: center;
+}
+
+
+.signup-login-link p {
+    margin: 0;
+
+    color: #666666;
+
+    font-size: 14px;
+}
+
+
+.signup-login-link a {
+    color: #e65300;
+
+    font-weight: 700;
+
+    text-decoration: none;
+}
+
+
+.signup-login-link a:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================
+   SIGNUP RESPONSIVE
+   ========================= */
+
+@media (max-width: 1050px) {
+
+    .signup-page {
+        align-items: flex-start;
+    }
+
+
+    .signup-shell {
+        grid-template-columns: 1fr;
+
+        gap: 40px;
+
+        padding: 50px 60px;
+
+        border-radius: 50px;
+    }
+
+
+    .signup-branding {
+        max-width: 100%;
+
+        text-align: center;
+    }
+
+
+    .signup-branding .brand-description {
+        margin-left: auto;
+
+        margin-right: auto;
+    }
+
+
+    .signup-card {
+        justify-self: center;
+    }
+}
+
+
+/* =========================
+   SMALL SCREEN SIGNUP
+   ========================= */
+
+@media (max-width: 650px) {
+
+    .signup-page {
+        padding: 15px;
+    }
+
+
+    .signup-shell {
+        padding: 40px 20px;
+
+        border-radius: 30px;
+    }
+
+
+    .signup-branding h1 {
+        font-size: 44px;
+    }
+
+
+    .signup-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .signup-card {
+        padding: 28px 22px;
+
+        border-radius: 22px;
+    }
+
+
+    .signup-card-heading h2 {
+        font-size: 25px;
+    }
+}
+
+/* Allows a signup field to span both columns */
+
+.signup-full-width {
+    grid-column: 1 / -1;
+}
+
+/* =========================================================
+   CUSTOMER DASHBOARD
+   ========================================================= */
+
+
+/* =========================
+   PAGE
+   ========================= */
+
+.dashboard-page {
+    min-height: 100vh;
+
+    background-color: #ff7a21;
+
+    padding: 28px;
+
+    color: #202020;
+}
+
+
+/* =========================
+   WHITE DASHBOARD AREA
+   ========================= */
+
+.dashboard-shell {
+    position: relative;
+
+    width: 100%;
+
+    min-height: calc(100vh - 56px);
+
+    background-color: #f9f9f9;
+
+    border-radius: 28px;
+
+    overflow: hidden;
+}
+
+
+/* =========================
+   PARTICLES
+   ========================= */
+
+.dashboard-particles {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    overflow: hidden;
+
+    pointer-events: none;
+
+    z-index: 0;
+}
+
+
+/*
+Particles should be more subtle here because
+they sit behind actual dashboard information.
+*/
+
+.dashboard-particles .particle {
+    opacity: 0.24;
+}
+
+
+.dashboard-particles .particle-line {
+    opacity: 0.16;
+}
+
+
+/* =========================
+   MAIN CONTENT
+   ========================= */
+
+.dashboard-content {
+    position: relative;
+
+    z-index: 1;
+
+    width: min(1250px, 100%);
+
+    min-height: calc(100vh - 56px);
+
+    margin: 0 auto;
+
+    padding: 70px 70px;
+
+    display: grid;
+
+    grid-template-columns: 0.9fr 1.1fr;
+
+    gap: 110px;
+
+    align-items: center;
+}
+
+
+/* =========================================================
+   LEFT SIDE
+   ========================================================= */
+
+.dashboard-left {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 22px;
+}
+
+
+/* =========================
+   WELCOME BOX
+   ========================= */
+
+.dashboard-welcome {
+    padding: 24px 28px;
+
+    background-color: #fff2e8;
+
+    border-left: 5px solid #ff7a21;
+
+    border-radius: 16px;
+}
+
+
+.dashboard-welcome-small {
+    margin: 0 0 6px;
+
+    color: #e85c00;
+
+    font-size: 12px;
+
+    font-weight: 800;
+
+    letter-spacing: 1.4px;
+
+    text-transform: uppercase;
+}
+
+
+.dashboard-welcome h1 {
+    margin: 0;
+
+    font-family: "Playfair Display", Georgia, serif;
+
+    font-size: 32px;
+
+    line-height: 1.2;
+}
+
+
+.dashboard-welcome > p:last-child {
+    margin: 8px 0 0;
+
+    color: #6a6a6a;
+
+    font-size: 14px;
+
+    line-height: 1.5;
+}
+
+
+/* =========================
+   INFORMATION CARDS
+   ========================= */
+
+.dashboard-info-card {
+    background-color: rgba(255, 255, 255, 0.94);
+
+    padding: 27px 30px;
+
+    border: 1px solid #ebebeb;
+
+    border-radius: 18px;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.055);
+}
+
+
+.dashboard-card-heading {
+    margin-bottom: 18px;
+}
+
+
+.dashboard-card-label {
+    margin: 0 0 5px;
+
+    color: #e85c00;
+
+    font-size: 11px;
+
+    font-weight: 800;
+
+    letter-spacing: 1.4px;
+}
+
+
+.dashboard-card-heading h2 {
+    margin: 0;
+
+    font-family: "Playfair Display", Georgia, serif;
+
+    font-size: 25px;
+}
+
+
+/* =========================
+   PROFILE / ADDRESS ROW
+   ========================= */
+
+.dashboard-info-row {
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    padding: 11px 0;
+
+    border-bottom: 1px solid #eeeeee;
+
+    font-size: 14px;
+}
+
+
+.dashboard-info-row:last-child {
+    border-bottom: none;
+
+    padding-bottom: 0;
+}
+
+
+.dashboard-info-row span {
+    color: #777777;
+}
+
+
+.dashboard-info-row strong {
+    text-align: right;
+
+    font-weight: 600;
+
+    color: #202020;
+}
+
+
+/* =========================================================
+   RIGHT SIDE
+   ========================================================= */
+
+.dashboard-right {
+    width: 100%;
+
+    max-width: 540px;
+
+    justify-self: center;
+}
+
+
+/* =========================
+   BRANDING
+   ========================= */
+
+.dashboard-branding {
+    margin-bottom: 32px;
+}
+
+
+.dashboard-brand-label {
+    margin: 0 0 11px;
+
+    color: #e85c00;
+
+    font-family: "Playfair Display", Georgia, serif;
+
+    font-size: 19px;
+
+    font-weight: 800;
+
+    letter-spacing: 0.5px;
+}
+
+
+.dashboard-branding h2 {
+    margin: 0;
+
+    font-family: "Playfair Display", Georgia, serif;
+
+    font-size: clamp(38px, 4vw, 50px);
+
+    line-height: 1.04;
+
+    letter-spacing: -1px;
+}
+
+
+.dashboard-branding > p:last-child {
+    max-width: 460px;
+
+    margin: 17px 0 0;
+
+    color: #707070;
+
+    font-size: 15px;
+
+    line-height: 1.6;
+}
+
+
+/* =========================
+   ACTION BUTTON LIST
+   ========================= */
+
+.dashboard-actions {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 14px;
+}
+
+
+/* =========================
+   ACTION BUTTON
+   ========================= */
+
+.dashboard-action {
+    min-height: 75px;
+
+    padding: 15px 22px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    background-color: rgba(255, 255, 255, 0.94);
+
+    border: 2px solid #ff7a21;
+
+    border-radius: 18px;
+
+    color: #202020;
+
+    text-decoration: none;
+
+    box-shadow: 0 5px 16px rgba(0, 0, 0, 0.035);
+
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+.dashboard-action div {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 4px;
+}
+
+
+.dashboard-action strong {
+    font-size: 15px;
+
+    font-weight: 700;
+}
+
+
+.dashboard-action div span {
+    color: #777777;
+
+    font-size: 12px;
+
+    transition: color 0.2s ease;
+}
+
+
+.dashboard-arrow {
+    flex-shrink: 0;
+
+    font-size: 23px;
+
+    line-height: 1;
+
+    color: #ff7a21;
+
+    transition:
+        color 0.2s ease,
+        transform 0.2s ease;
+}
+
+
+/* =========================
+   NORMAL BUTTON HOVER
+   ========================= */
+
+.dashboard-action:hover {
+    background-color: #ff7a21;
+
+    color: #ffffff;
+
+    transform: translateY(-2px);
+
+    box-shadow: 0 10px 24px rgba(255, 122, 33, 0.20);
+}
+
+
+.dashboard-action:hover div span {
+    color: rgba(255, 255, 255, 0.82);
+}
+
+
+.dashboard-action:hover .dashboard-arrow {
+    color: #ffffff;
+
+    transform: translateX(4px);
+}
+
+
+/* =========================
+   SIGN OUT
+   ========================= */
+
+.dashboard-signout {
+    margin-top: 3px;
+}
+
+
+.dashboard-signout:hover {
+    background-color: #202020;
+
+    border-color: #202020;
+
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.16);
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 1000px) {
+
+    .dashboard-content {
+        grid-template-columns: 1fr;
+
+        gap: 55px;
+
+        padding: 55px 50px;
+    }
+
+
+    .dashboard-left,
+    .dashboard-right {
+        width: 100%;
+
+        max-width: 700px;
+
+        margin: 0 auto;
+    }
+
+
+    .dashboard-branding {
+        text-align: center;
+    }
+
+
+    .dashboard-branding > p:last-child {
+        margin-left: auto;
+
+        margin-right: auto;
+    }
+}
+
+
+/* =========================
+   MOBILE
+   ========================= */
+
+@media (max-width: 650px) {
+
+    .dashboard-page {
+        padding: 14px;
+    }
+
+
+    .dashboard-shell {
+        min-height: calc(100vh - 28px);
+
+        border-radius: 22px;
+    }
+
+
+    .dashboard-content {
+        padding: 35px 20px;
+
+        gap: 45px;
+    }
+
+
+    .dashboard-welcome {
+        padding: 21px 22px;
+    }
+
+
+    .dashboard-welcome h1 {
+        font-size: 27px;
+    }
+
+
+    .dashboard-info-card {
+        padding: 23px 22px;
+    }
+
+
+    .dashboard-info-row {
+        flex-direction: column;
+
+        gap: 4px;
+    }
+
+
+    .dashboard-info-row strong {
+        text-align: left;
+    }
+
+
+    .dashboard-branding h2 {
+        font-size: 37px;
+    }
+
+
+    .dashboard-action {
+        padding: 14px 18px;
+    }
+}
+
+
+/* =========================================================
+   RESTAURANT DASHBOARD
+   ========================================================= */
+
+
+/* =========================
+   PAGE
+   ========================= */
+
+.restaurant-dashboard-page {
+    min-height: 100vh;
+
+    background-color: #f7f7f7;
+
+    padding: 28px;
+
+    color: #202020;
+}
+
+
+/* =========================
+   ORANGE MAIN AREA
+   ========================= */
+
+.restaurant-dashboard-shell {
+    position: relative;
+
+    width: 100%;
+
+    min-height: calc(100vh - 56px);
+
+    background-color: #ff7a21;
+
+    border-radius: 28px;
+
+    overflow: hidden;
+}
+
+
+/* =========================
+   PARTICLES
+   ========================= */
+
+.restaurant-dashboard-particles {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    overflow: hidden;
+
+    pointer-events: none;
+
+    z-index: 0;
+}
+
+
+/*
+Turn the existing gray particles into
+faint white particles on the orange background.
+*/
+
+.restaurant-dashboard-particles .particle {
+    filter: brightness(0) invert(1);
+
+    opacity: 0.18;
+}
+
+
+.restaurant-dashboard-particles .particle-line {
+    background-color: rgba(255, 255, 255, 0.25);
+
+    opacity: 0.22;
+}
+
+
+/* Outlined circles need white borders */
+
+.restaurant-dashboard-particles .circle-outline {
+    background-color: transparent;
+
+    border-color: rgba(255, 255, 255, 0.7);
+}
+
+
+/* Triangle color */
+
+.restaurant-dashboard-particles .triangle {
+    background-color: transparent;
+
+    border-left-color: transparent;
+    border-right-color: transparent;
+
+    border-bottom-color: rgba(255, 255, 255, 0.55);
+}
+
+
+/* =========================
+   MAIN CONTENT
+   ========================= */
+
+.restaurant-dashboard-content {
+    position: relative;
+
+    z-index: 1;
+
+    width: min(1280px, 100%);
+
+    min-height: calc(100vh - 56px);
+
+    margin: 0 auto;
+
+    padding: 70px;
+
+    display: grid;
+
+    grid-template-columns: 0.9fr 1.1fr;
+
+    gap: 100px;
+
+    align-items: center;
+}
+
+
+/* =========================================================
+   LEFT SIDE
+   ========================================================= */
+
+.restaurant-dashboard-left {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 22px;
+}
+
+
+/* =========================
+   WELCOME
+   ========================= */
+
+.restaurant-welcome {
+    padding: 25px 28px;
+
+    background-color: #202020;
+
+    border-left: 5px solid #ffffff;
+
+    border-radius: 16px;
+
+    color: #ffffff;
+
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.14);
+}
+
+
+.restaurant-welcome-small {
+    margin: 0 0 7px;
+
+    color: #ffb685;
+
+    font-size: 12px;
+
+    font-weight: 800;
+
+    letter-spacing: 1.4px;
+
+    text-transform: uppercase;
+}
+
+
+.restaurant-welcome h1 {
+    margin: 0;
+
+    font-family: "Playfair Display", Georgia, serif;
+
+    font-size: 32px;
+
+    line-height: 1.15;
+}
+
+
+.restaurant-welcome > p:last-child {
+    margin: 9px 0 0;
+
+    color: #d7d7d7;
+
+    font-size: 14px;
+
+    line-height: 1.5;
+}
+
+
+/* =========================
+   INFO CARDS
+   ========================= */
+
+.restaurant-info-card {
+    background-color: rgba(255, 255, 255, 0.97);
+
+    padding: 27px 30px;
+
+    border-radius: 18px;
+
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.12);
+}
+
+
+.restaurant-card-heading {
+    margin-bottom: 18px;
+}
+
+
+.restaurant-card-label {
+    margin: 0 0 5px;
+
+    color: #e85c00;
+
+    font-size: 11px;
+
+    font-weight: 800;
+
+    letter-spacing: 1.4px;
+}
+
+
+.restaurant-card-heading h2 {
+    margin: 0;
+
+    font-family: "Playfair Display", Georgia, serif;
+
+    font-size: 25px;
+}
+
+
+/* =========================
+   INFORMATION ROW
+   ========================= */
+
+.restaurant-info-row {
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    padding: 11px 0;
+
+    border-bottom: 1px solid #eeeeee;
+
+    font-size: 14px;
+}
+
+
+.restaurant-info-row:last-child {
+    border-bottom: none;
+
+    padding-bottom: 0;
+}
+
+
+.restaurant-info-row span {
+    color: #777777;
+}
+
+
+.restaurant-info-row strong {
+    color: #202020;
+
+    text-align: right;
+
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   RIGHT SIDE
+   ========================================================= */
+
+.restaurant-dashboard-right {
+    width: 100%;
+
+    max-width: 600px;
+
+    justify-self: center;
+}
+
+
+/* =========================
+   BRANDING
+   ========================= */
+
+.restaurant-dashboard-branding {
+    margin-bottom: 30px;
+
+    color: #ffffff;
+}
+
+
+.restaurant-brand-label {
+    margin: 0 0 10px;
+
+    font-family: "Playfair Display", Georgia, serif;
+
+    font-size: 19px;
+
+    font-weight: 800;
+}
+
+
+.restaurant-dashboard-branding h2 {
+    margin: 0;
+
+    font-family: "Playfair Display", Georgia, serif;
+
+    font-size: clamp(38px, 4vw, 50px);
+
+    line-height: 1.04;
+
+    letter-spacing: -1px;
+}
+
+
+.restaurant-dashboard-branding > p:last-child {
+    max-width: 500px;
+
+    margin: 17px 0 0;
+
+    color: rgba(255, 255, 255, 0.85);
+
+    font-size: 15px;
+
+    line-height: 1.6;
+}
+
+
+/* =========================
+   ACTION GRID
+   ========================= */
+
+.restaurant-actions {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 14px;
+}
+
+
+/* =========================
+   ACTION CARD
+   ========================= */
+
+.restaurant-action {
+    position: relative;
+
+    min-height: 110px;
+
+    padding: 19px 20px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    gap: 5px;
+
+    background-color: rgba(255, 255, 255, 0.97);
+
+    border: 2px solid #ffffff;
+
+    border-radius: 18px;
+
+    color: #202020;
+
+    text-decoration: none;
+
+    box-shadow: 0 7px 20px rgba(0, 0, 0, 0.10);
+
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        border-color 0.2s ease;
+}
+
+
+.restaurant-action strong {
+    padding-right: 28px;
+
+    font-size: 15px;
+}
+
+
+.restaurant-action > span:not(.restaurant-action-arrow) {
+    padding-right: 28px;
+
+    color: #777777;
+
+    font-size: 12px;
+
+    line-height: 1.4;
+
+    transition: color 0.2s ease;
+}
+
+
+.restaurant-action-arrow {
+    position: absolute;
+
+    right: 18px;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    color: #ff7a21;
+
+    font-size: 22px;
+
+    transition:
+        color 0.2s ease,
+        transform 0.2s ease;
+}
+
+
+/* =========================
+   ACTION HOVER
+   ========================= */
+
+.restaurant-action:hover {
+    background-color: #202020;
+
+    border-color: #202020;
+
+    color: #ffffff;
+
+    transform: translateY(-2px);
+
+    box-shadow: 0 11px 25px rgba(0, 0, 0, 0.18);
+}
+
+
+.restaurant-action:hover > span:not(.restaurant-action-arrow) {
+    color: #d3d3d3;
+}
+
+
+.restaurant-action:hover .restaurant-action-arrow {
+    color: #ffffff;
+
+    transform: translate(4px, -50%);
+}
+
+
+/* =========================
+   SIGN OUT
+   ========================= */
+
+.restaurant-signout {
+    grid-column: 1 / -1;
+
+    min-height: 76px;
+}
+
+
+.restaurant-signout:hover {
+    background-color: #ffffff;
+
+    border-color: #ffffff;
+
+    color: #202020;
+}
+
+
+.restaurant-signout:hover > span:not(.restaurant-action-arrow) {
+    color: #777777;
+}
+
+
+.restaurant-signout:hover .restaurant-action-arrow {
+    color: #ff7a21;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 1050px) {
+
+    .restaurant-dashboard-content {
+        grid-template-columns: 1fr;
+
+        gap: 55px;
+
+        padding: 55px 50px;
+    }
+
+
+    .restaurant-dashboard-left,
+    .restaurant-dashboard-right {
+        width: 100%;
+
+        max-width: 750px;
+
+        margin: 0 auto;
+    }
+
+
+    .restaurant-dashboard-branding {
+        text-align: center;
+    }
+
+
+    .restaurant-dashboard-branding > p:last-child {
+        margin-left: auto;
+
+        margin-right: auto;
+    }
+}
+
+
+/* =========================
+   MOBILE
+   ========================= */
+
+@media (max-width: 650px) {
+
+    .restaurant-dashboard-page {
+        padding: 14px;
+    }
+
+
+    .restaurant-dashboard-shell {
+        min-height: calc(100vh - 28px);
+
+        border-radius: 22px;
+    }
+
+
+    .restaurant-dashboard-content {
+        padding: 35px 20px;
+
+        gap: 45px;
+    }
+
+
+    .restaurant-welcome {
+        padding: 21px 22px;
+    }
+
+
+    .restaurant-welcome h1 {
+        font-size: 27px;
+    }
+
+
+    .restaurant-info-card {
+        padding: 23px 22px;
+    }
+
+
+    .restaurant-info-row {
+        flex-direction: column;
+
+        gap: 4px;
+    }
+
+
+    .restaurant-info-row strong {
+        text-align: left;
+    }
+
+
+    .restaurant-dashboard-branding h2 {
+        font-size: 37px;
+    }
+
+
+    .restaurant-actions {
+        grid-template-columns: 1fr;
+    }
+
+
+    .restaurant-signout {
+        grid-column: auto;
+    }
+
+
+    .restaurant-action {
+        min-height: 85px;
+    }
+}
+
+/* =========================================================
+   EDIT CUSTOMER PROFILE
+   ========================================================= */
+
+
+/* =========================
+   PAGE
+   ========================= */
+
+.edit-profile-page {
+    min-height: 100vh;
+
+    background-color: #f5f5f5;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 20px;
+
+    color: #202020;
+}
+
+
+/* =========================
+   ORANGE SHELL
+   ========================= */
+
+.edit-profile-shell {
+    position: relative;
+
+    z-index: 1;
+
+    width: min(1380px, 100%);
+
+    min-height: 800px;
+
+    padding: 55px 70px;
+
+    display: grid;
+
+    grid-template-columns: 0.72fr 1.28fr;
+
+    align-items: center;
+
+    gap: 65px;
+
+    background-color: #ff7a21;
+
+    border-radius: 75px;
+}
+
+
+/* =========================================================
+   LEFT BRANDING
+   ========================================================= */
+
+.edit-profile-branding {
+    max-width: 420px;
+
+    font-family: "Playfair Display", Georgia, serif;
+}
+
+
+.edit-profile-branding .brand-label {
+    margin-bottom: 18px;
+}
+
+
+.edit-profile-branding h1 {
+    margin: 0;
+
+    font-family: "Playfair Display", Georgia, serif;
+
+    font-size: clamp(50px, 4.5vw, 70px);
+
+    font-weight: 800;
+
+    line-height: 1.02;
+
+    letter-spacing: -1.5px;
+}
+
+
+.edit-profile-branding .brand-description {
+    max-width: 380px;
+
+    margin-top: 25px;
+}
+
+
+/* =========================
+   BACK LINK
+   ========================= */
+
+.edit-profile-back {
+    display: inline-block;
+
+    margin-top: 35px;
+
+    padding: 12px 18px;
+
+    border: 2px solid #202020;
+
+    border-radius: 10px;
+
+    color: #202020;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    text-decoration: none;
+
+    transition: 0.2s;
+}
+
+
+.edit-profile-back:hover {
+    background-color: #202020;
+
+    color: #ffffff;
+
+    transform: translateY(-1px);
+}
+
+
+/* =========================================================
+   WHITE FORM CARD
+   ========================================================= */
+
+.edit-profile-card {
+    width: 100%;
+
+    max-width: 790px;
+
+    justify-self: end;
+
+    padding: 32px 38px;
+
+    background-color: #ffffff;
+
+    border-radius: 28px;
+
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.12);
+}
+
+
+/* =========================
+   CARD HEADING
+   ========================= */
+
+.edit-profile-card-heading {
+    margin-bottom: 22px;
+
+    text-align: center;
+}
+
+
+.edit-profile-card-heading h2 {
+    margin: 0 0 7px;
+
+    font-size: 29px;
+
+    font-weight: 700;
+}
+
+
+.edit-profile-card-heading p {
+    margin: 0;
+
+    color: #666666;
+
+    font-size: 14px;
+}
+
+
+/* =========================
+   SUCCESS / ERROR MESSAGE
+   ========================= */
+
+.edit-profile-message {
+    margin-bottom: 21px;
+
+    padding: 11px 14px;
+
+    border-radius: 9px;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    text-align: center;
+}
+
+
+.edit-profile-message.success {
+    background-color: #eef9ef;
+
+    border: 1px solid #a8dcae;
+
+    color: #287433;
+}
+
+
+.edit-profile-message.error {
+    background-color: #fff0ea;
+
+    border: 1px solid #ffb08a;
+
+    color: #b33b00;
+}
+
+
+/* =========================================================
+   SECTION HEADINGS
+   ========================================================= */
+
+.edit-profile-section-heading {
+    margin-bottom: 15px;
+}
+
+
+.edit-profile-section-heading span {
+    display: block;
+
+    margin-bottom: 4px;
+
+    color: #e65300;
+
+    font-size: 11px;
+
+    font-weight: 800;
+
+    letter-spacing: 1.4px;
+}
+
+
+.edit-profile-section-heading h3 {
+    margin: 0;
+
+    font-family: "Playfair Display", Georgia, serif;
+
+    font-size: 23px;
+}
+
+
+/* =========================================================
+   PROFILE GRID
+   ========================================================= */
+
+.edit-profile-grid {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 15px 20px;
+}
+
+
+/* =========================
+   ADDRESS GRID
+   ========================= */
+
+.edit-profile-address-grid {
+    display: grid;
+
+    grid-template-columns: 0.65fr 1fr 1fr;
+
+    gap: 15px 20px;
+}
+
+
+/* =========================================================
+   FORM FIELDS
+   ========================================================= */
+
+.edit-profile-form-group {
+    min-width: 0;
+}
+
+
+.edit-profile-form-group label {
+    display: block;
+
+    margin-bottom: 7px;
+
+    font-size: 13px;
+
+    font-weight: 600;
+}
+
+
+.edit-profile-form-group input,
+.edit-profile-form-group select {
+    width: 100%;
+
+    height: 45px;
+
+    padding: 0 13px;
+
+    background-color: #ffffff;
+
+    border: 1px solid #d2d2d2;
+
+    border-radius: 9px;
+
+    color: #202020;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 14px;
+
+    outline: none;
+
+    transition: 0.2s;
+}
+
+
+.edit-profile-form-group input:focus,
+.edit-profile-form-group select:focus {
+    border-color: #ff7a21;
+
+    box-shadow: 0 0 0 3px rgba(255, 122, 33, 0.12);
+}
+
+
+.edit-profile-form-group input::placeholder {
+    color: #999999;
+}
+
+
+/* =========================================================
+   SAVE BUTTON
+   ========================================================= */
+
+.edit-profile-button {
+    width: 100%;
+
+    margin-top: 20px;
+
+    padding: 13px 18px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background-color: #202020;
+
+    color: #ffffff;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+
+.edit-profile-button:hover {
+    background-color: #000000;
+
+    transform: translateY(-1px);
+}
+
+
+.edit-profile-button:active {
+    transform: translateY(0);
+}
+
+
+/* =========================
+   ADDRESS BUTTON
+   ========================= */
+
+.edit-profile-address-button {
+    margin-top: 18px;
+}
+
+
+/* =========================================================
+   DIVIDER
+   ========================================================= */
+
+.edit-profile-divider {
+    height: 1px;
+
+    margin: 26px 0 22px;
+
+    background-color: #dddddd;
+}
+
+
+/* =========================
+   MOBILE BACK LINK
+   ========================= */
+
+.edit-profile-mobile-back {
+    display: none;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 1050px) {
+
+    .edit-profile-page {
+        align-items: flex-start;
+    }
+
+
+    .edit-profile-shell {
+        grid-template-columns: 1fr;
+
+        gap: 40px;
+
+        padding: 50px 60px;
+
+        border-radius: 50px;
+    }
+
+
+    .edit-profile-branding {
+        max-width: 100%;
+
+        text-align: center;
+    }
+
+
+    .edit-profile-branding .brand-description {
+        margin-left: auto;
+
+        margin-right: auto;
+    }
+
+
+    .edit-profile-back {
+        display: none;
+    }
+
+
+    .edit-profile-card {
+        justify-self: center;
+    }
+
+
+    .edit-profile-mobile-back {
+        display: block;
+
+        margin-top: 22px;
+
+        padding-top: 18px;
+
+        border-top: 1px solid #dddddd;
+
+        text-align: center;
+    }
+
+
+    .edit-profile-mobile-back a {
+        color: #e65300;
+
+        font-size: 14px;
+
+        font-weight: 700;
+
+        text-decoration: none;
+    }
+
+
+    .edit-profile-mobile-back a:hover {
+        text-decoration: underline;
+    }
+}
+
+
+/* =========================================================
+   SMALL SCREENS
+   ========================================================= */
+
+@media (max-width: 650px) {
+
+    .edit-profile-page {
+        padding: 15px;
+    }
+
+
+    .edit-profile-shell {
+        padding: 40px 20px;
+
+        border-radius: 30px;
+    }
+
+
+    .edit-profile-branding h1 {
+        font-size: 44px;
+    }
+
+
+    .edit-profile-card {
+        padding: 28px 22px;
+
+        border-radius: 22px;
+    }
+
+
+    .edit-profile-grid,
+    .edit-profile-address-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .edit-profile-card-heading h2 {
+        font-size: 25px;
+    }
+}
+
+/* =========================================================
+   BROWSE RESTAURANTS
+   ========================================================= */
+
+
+/* =========================
+   PAGE
+   ========================= */
+
+.browse-restaurants-page {
+    min-height: 100vh;
+
+    background-color: #ff7a21;
+
+    padding: 28px;
+
+    color: #202020;
+}
+
+
+/* =========================
+   WHITE INNER AREA
+   ========================= */
+
+.browse-restaurants-shell {
+    position: relative;
+
+    width: 100%;
+
+    min-height: calc(100vh - 56px);
+
+    background-color: #f9f9f9;
+
+    border-radius: 28px;
+
+    overflow: hidden;
+}
+
+
+/* =========================
+   CONTENT
+   ========================= */
+
+.browse-restaurants-content {
+    position: relative;
+
+    z-index: 1;
+
+    width: min(1250px, 100%);
+
+    margin: 0 auto;
+
+    padding: 55px 65px 60px;
+}
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.browse-restaurants-header {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: flex-start;
+
+    gap: 30px;
+
+    margin-bottom: 28px;
+}
+
+
+.browse-page-label {
+    margin: 0 0 7px;
+
+    color: #e85c00;
+
+    font-size: 11px;
+
+    font-weight: 800;
+
+    letter-spacing: 1.5px;
+
+    text-transform: uppercase;
+}
+
+
+.browse-restaurants-header h1 {
+    margin: 0;
+
+    font-family: "Playfair Display", Georgia, serif;
+
+    font-size: clamp(38px, 4vw, 50px);
+
+    line-height: 1.05;
+}
+
+
+.browse-page-description {
+    max-width: 520px;
+
+    margin: 13px 0 0;
+
+    color: #707070;
+
+    font-size: 15px;
+
+    line-height: 1.6;
+}
+
+
+/* =========================
+   BACK BUTTON
+   ========================= */
+
+.browse-back-button {
+    flex-shrink: 0;
+
+    padding: 12px 18px;
+
+    border: 2px solid #ff7a21;
+
+    border-radius: 11px;
+
+    color: #202020;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    text-decoration: none;
+
+    transition: 0.2s ease;
+}
+
+
+.browse-back-button:hover {
+    background-color: #ff7a21;
+
+    color: #ffffff;
+
+    transform: translateY(-1px);
+}
+
+
+/* =========================================================
+   FILTER CARD
+   ========================================================= */
+
+.browse-filter-card {
+    margin-bottom: 30px;
+
+    padding: 20px 24px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: end;
+
+    gap: 30px;
+
+    background-color: rgba(255, 255, 255, 0.95);
+
+    border: 1px solid #ebebeb;
+
+    border-radius: 18px;
+
+    box-shadow: 0 7px 22px rgba(0, 0, 0, 0.05);
+}
+
+
+/* =========================
+   PREFERENCE
+   ========================= */
+
+.browse-preference {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 5px;
+}
+
+
+.browse-preference span {
+    color: #777777;
+
+    font-size: 12px;
+}
+
+
+.browse-preference strong {
+    font-family: "Playfair Display", Georgia, serif;
+
+    font-size: 22px;
+}
+
+
+/* =========================
+   FILTER FORM
+   ========================= */
+
+.browse-filter-form {
+    display: flex;
+
+    align-items: end;
+
+    gap: 12px;
+}
+
+
+.browse-filter-field {
+    min-width: 220px;
+}
+
+
+.browse-filter-field label {
+    display: block;
+
+    margin-bottom: 6px;
+
+    font-size: 12px;
+
+    font-weight: 700;
+}
+
+
+.browse-filter-field select {
+    width: 100%;
+
+    height: 42px;
+
+    padding: 0 12px;
+
+    border: 1px solid #d3d3d3;
+
+    border-radius: 9px;
+
+    background-color: #ffffff;
+
+    color: #202020;
+
+    font-size: 13px;
+
+    outline: none;
+}
+
+
+.browse-filter-field select:focus {
+    border-color: #ff7a21;
+
+    box-shadow: 0 0 0 3px rgba(255, 122, 33, 0.12);
+}
+
+
+.browse-filter-button {
+    height: 42px;
+
+    padding: 0 18px;
+
+    border: none;
+
+    border-radius: 9px;
+
+    background-color: #202020;
+
+    color: #ffffff;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+
+.browse-filter-button:hover {
+    background-color: #000000;
+
+    transform: translateY(-1px);
+}
+
+
+/* =========================================================
+   LIST HEADING
+   ========================================================= */
+
+.restaurant-list-heading {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: end;
+
+    gap: 20px;
+
+    margin-bottom: 16px;
+}
+
+
+.restaurant-list-heading h2 {
+    margin: 0;
+
+    font-family: "Playfair Display", Georgia, serif;
+
+    font-size: 27px;
+}
+
+
+.restaurant-count {
+    color: #777777;
+
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   SCROLL AREA
+   ========================================================= */
+
+.restaurant-scroll-area {
+    max-height: 510px;
+
+    padding-right: 10px;
+
+    overflow-y: auto;
+
+    scrollbar-width: thin;
+
+    scrollbar-color: #ff7a21 #eeeeee;
+}
+
+
+.restaurant-scroll-area::-webkit-scrollbar {
+    width: 8px;
+}
+
+
+.restaurant-scroll-area::-webkit-scrollbar-track {
+    background-color: #eeeeee;
+
+    border-radius: 20px;
+}
+
+
+.restaurant-scroll-area::-webkit-scrollbar-thumb {
+    background-color: #ff7a21;
+
+    border-radius: 20px;
+}
+
+
+/* =========================================================
+   RESTAURANT CARD
+   ========================================================= */
+
+.restaurant-card {
+    min-height: 118px;
+
+    margin-bottom: 14px;
+
+    padding: 21px 22px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 25px;
+
+    background-color: rgba(255, 255, 255, 0.96);
+
+    border: 1px solid #e8e8e8;
+
+    border-left: 4px solid #ff7a21;
+
+    border-radius: 16px;
+
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.045);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+.restaurant-card:last-child {
+    margin-bottom: 0;
+}
+
+
+.restaurant-card:hover {
+    transform: translateY(-2px);
+
+    box-shadow: 0 10px 26px rgba(0, 0, 0, 0.075);
+}
+
+
+.restaurant-card-main {
+    min-width: 0;
+
+    flex: 1;
+}
+
+
+/* =========================
+   CARD TOP
+   ========================= */
+
+.restaurant-card-top {
+    display: flex;
+
+    align-items: flex-start;
+
+    justify-content: space-between;
+
+    gap: 20px;
+}
+
+
+.restaurant-cuisine {
+    margin: 0 0 4px;
+
+    color: #e85c00;
+
+    font-size: 11px;
+
+    font-weight: 800;
+
+    letter-spacing: 1px;
+
+    text-transform: uppercase;
+}
+
+
+.restaurant-card h3 {
+    margin: 0;
+
+    font-family: "Playfair Display", Georgia, serif;
+
+    font-size: 24px;
+}
+
+
+/* =========================
+   MATCH BADGE
+   ========================= */
+
+.restaurant-match-badge {
+    flex-shrink: 0;
+
+    padding: 7px 10px;
+
+    background-color: #fff1e7;
+
+    border-radius: 50px;
+
+    color: #d95800;
+
+    font-size: 11px;
+
+    font-weight: 700;
+}
+
+
+/* =========================
+   LOCATION
+   ========================= */
+
+.restaurant-location {
+    margin-top: 14px;
+
+    display: flex;
+
+    gap: 9px;
+
+    font-size: 13px;
+}
+
+
+.restaurant-location span {
+    color: #8a8a8a;
+}
+
+
+.restaurant-location strong {
+    font-weight: 600;
+}
+
+
+/* =========================
+   VIEW MENU BUTTON
+   ========================= */
+
+.restaurant-menu-button {
+    min-width: 135px;
+
+    padding: 12px 16px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 15px;
+
+    border: 2px solid #ff7a21;
+
+    border-radius: 11px;
+
+    color: #202020;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    text-decoration: none;
+
+    transition: 0.2s ease;
+}
+
+
+.restaurant-menu-button span {
+    color: #ff7a21;
+
+    font-size: 19px;
+
+    transition: 0.2s ease;
+}
+
+
+.restaurant-menu-button:hover {
+    background-color: #ff7a21;
+
+    color: #ffffff;
+}
+
+
+.restaurant-menu-button:hover span {
+    color: #ffffff;
+
+    transform: translateX(3px);
+}
+
+
+/* =========================================================
+   EMPTY STATE
+   ========================================================= */
+
+.restaurant-empty-state {
+    padding: 55px 25px;
+
+    background-color: rgba(255, 255, 255, 0.95);
+
+    border: 1px dashed #cccccc;
+
+    border-radius: 16px;
+
+    text-align: center;
+}
+
+
+.restaurant-empty-state h3 {
+    margin: 0 0 8px;
+
+    font-family: "Playfair Display", Georgia, serif;
+
+    font-size: 25px;
+}
+
+
+.restaurant-empty-state p {
+    margin: 0 0 18px;
+
+    color: #777777;
+
+    font-size: 14px;
+}
+
+
+.restaurant-empty-state a {
+    color: #e85c00;
+
+    font-weight: 700;
+
+    text-decoration: none;
+}
+
+
+.restaurant-empty-state a:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 850px) {
+
+    .browse-restaurants-content {
+        padding: 45px 35px;
+    }
+
+
+    .browse-filter-card {
+        align-items: stretch;
+
+        flex-direction: column;
+    }
+
+
+    .browse-filter-form {
+        width: 100%;
+    }
+
+
+    .browse-filter-field {
+        flex: 1;
+
+        min-width: 0;
+    }
+
+
+    .restaurant-card {
+        align-items: stretch;
+
+        flex-direction: column;
+    }
+
+
+    .restaurant-menu-button {
+        width: 100%;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .browse-restaurants-page {
+        padding: 14px;
+    }
+
+
+    .browse-restaurants-shell {
+        min-height: calc(100vh - 28px);
+
+        border-radius: 22px;
+    }
+
+
+    .browse-restaurants-content {
+        padding: 35px 20px;
+    }
+
+
+    .browse-restaurants-header {
+        flex-direction: column;
+    }
+
+
+    .browse-back-button {
+        width: 100%;
+
+        text-align: center;
+    }
+
+
+    .browse-filter-form {
+        align-items: stretch;
+
+        flex-direction: column;
+    }
+
+
+    .browse-filter-button {
+        width: 100%;
+    }
+
+
+    .restaurant-card-top {
+        flex-direction: column;
+    }
+
+
+    .restaurant-match-badge {
+        align-self: flex-start;
+    }
+
+
+    .restaurant-location {
+        flex-direction: column;
+
+        gap: 4px;
+    }
+
+
+    .restaurant-scroll-area {
+        max-height: none;
+
+        overflow: visible;
+    }
+}
+
+/* =========================================================
+   BROWSE MENU
+   ========================================================= */
+
+
+/* =========================
+   PAGE
+   ========================= */
+
+.browse-menu-page {
+    min-height: 100vh;
+
+    background-color: #ff7a21;
+
+    padding: 28px;
+
+    color: #202020;
+}
+
+
+/* =========================
+   WHITE INNER AREA
+   ========================= */
+
+.browse-menu-shell {
+    position: relative;
+
+    width: 100%;
+
+    min-height: calc(100vh - 56px);
+
+    background-color: #f9f9f9;
+
+    border-radius: 28px;
+
+    overflow: hidden;
+}
+
+
+/* =========================
+   CONTENT
+   ========================= */
+
+.browse-menu-content {
+    position: relative;
+
+    z-index: 1;
+
+    width: min(1250px, 100%);
+
+    margin: 0 auto;
+
+    padding: 52px 65px 60px;
+}
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.browse-menu-header {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: flex-start;
+
+    gap: 30px;
+
+    margin-bottom: 24px;
+}
+
+
+.browse-menu-header h1 {
+    margin: 0;
+
+    font-family: "Playfair Display", Georgia, serif;
+
+    font-size: clamp(38px, 4vw, 50px);
+
+    line-height: 1.05;
+}
+
+
+.browse-menu-location {
+    margin: 11px 0 0;
+
+    color: #707070;
+
+    font-size: 14px;
+}
+
+
+/* =========================
+   HEADER ACTIONS
+   ========================= */
+
+.browse-menu-header-actions {
+    display: flex;
+
+    gap: 12px;
+
+    align-items: center;
+}
+
+
+/* =========================
+   CART BUTTON
+   ========================= */
+
+.browse-cart-button {
+    min-height: 43px;
+
+    padding: 10px 15px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    background-color: #202020;
+
+    border: 2px solid #202020;
+
+    border-radius: 11px;
+
+    color: #ffffff;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    text-decoration: none;
+
+    transition: 0.2s ease;
+}
+
+
+.browse-cart-button span {
+    min-width: 23px;
+
+    height: 23px;
+
+    padding: 0 6px;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background-color: #ff7a21;
+
+    border-radius: 50px;
+
+    color: #ffffff;
+
+    font-size: 11px;
+}
+
+
+.browse-cart-button:hover {
+    background-color: #000000;
+
+    transform: translateY(-1px);
+}
+
+
+/* =========================================================
+   MESSAGE
+   ========================================================= */
+
+.browse-menu-message {
+    margin-bottom: 22px;
+
+    padding: 12px 16px;
+
+    background-color: #fff1e7;
+
+    border: 1px solid #ffc39a;
+
+    border-left: 4px solid #ff7a21;
+
+    border-radius: 10px;
+
+    color: #9f4300;
+
+    font-size: 13px;
+
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   MENU FILTER CARD
+   ========================================================= */
+
+.browse-menu-filter-card {
+    margin-bottom: 27px;
+
+    padding: 19px 24px;
+
+    display: flex;
+
+    align-items: end;
+
+    justify-content: space-between;
+
+    gap: 30px;
+
+    background-color: rgba(255, 255, 255, 0.96);
+
+    border: 1px solid #e8e8e8;
+
+    border-radius: 18px;
+
+    box-shadow: 0 7px 22px rgba(0, 0, 0, 0.05);
+}
+
+
+.browse-menu-filter-card h2 {
+    margin: 0;
+
+    font-family: "Playfair Display", Georgia, serif;
+
+    font-size: 25px;
+}
+
+
+/* =========================================================
+   LIST HEADING
+   ========================================================= */
+
+.browse-menu-list-heading {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: end;
+
+    gap: 20px;
+
+    margin-bottom: 15px;
+}
+
+
+.browse-menu-list-heading h2 {
+    margin: 0;
+
+    font-family: "Playfair Display", Georgia, serif;
+
+    font-size: 27px;
+}
+
+
+/* =========================================================
+   SCROLL AREA
+   ========================================================= */
+
+.browse-menu-scroll-area {
+    max-height: 500px;
+
+    padding-right: 10px;
+
+    overflow-y: auto;
+
+    scrollbar-width: thin;
+
+    scrollbar-color: #ff7a21 #eeeeee;
+}
+
+
+.browse-menu-scroll-area::-webkit-scrollbar {
+    width: 8px;
+}
+
+
+.browse-menu-scroll-area::-webkit-scrollbar-track {
+    background-color: #eeeeee;
+
+    border-radius: 20px;
+}
+
+
+.browse-menu-scroll-area::-webkit-scrollbar-thumb {
+    background-color: #ff7a21;
+
+    border-radius: 20px;
+}
+
+
+/* =========================================================
+   FOOD CARD
+   ========================================================= */
+
+.browse-food-card {
+    min-height: 145px;
+
+    margin-bottom: 14px;
+
+    padding: 22px 23px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 28px;
+
+    background-color: rgba(255, 255, 255, 0.97);
+
+    border: 1px solid #e8e8e8;
+
+    border-left: 4px solid #ff7a21;
+
+    border-radius: 16px;
+
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.045);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+.browse-food-card:last-child {
+    margin-bottom: 0;
+}
+
+
+.browse-food-card:hover {
+    transform: translateY(-2px);
+
+    box-shadow: 0 10px 26px rgba(0, 0, 0, 0.075);
+}
+
+
+/* =========================
+   FOOD MAIN INFO
+   ========================= */
+
+.browse-food-main {
+    min-width: 0;
+
+    flex: 1;
+}
+
+
+.browse-food-top {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: flex-start;
+
+    gap: 20px;
+}
+
+
+.browse-food-tag {
+    margin: 0 0 4px;
+
+    color: #e85c00;
+
+    font-size: 11px;
+
+    font-weight: 800;
+
+    letter-spacing: 1px;
+
+    text-transform: uppercase;
+}
+
+
+.browse-food-card h3 {
+    margin: 0;
+
+    font-family: "Playfair Display", Georgia, serif;
+
+    font-size: 24px;
+}
+
+
+/* =========================
+   PRICE
+   ========================= */
+
+.browse-food-price {
+    flex-shrink: 0;
+
+    color: #202020;
+
+    font-family: "Playfair Display", Georgia, serif;
+
+    font-size: 22px;
+
+    font-weight: 800;
+}
+
+
+/* =========================
+   DESCRIPTION
+   ========================= */
+
+.browse-food-description {
+    max-width: 700px;
+
+    margin: 10px 0 0;
+
+    color: #6f6f6f;
+
+    font-size: 13px;
+
+    line-height: 1.5;
+}
+
+
+/* =========================
+   FOOD DETAILS
+   ========================= */
+
+.browse-food-details {
+    margin-top: 13px;
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 12px 24px;
+
+    color: #777777;
+
+    font-size: 12px;
+}
+
+
+.browse-food-details strong {
+    color: #454545;
+}
+
+
+/* =========================================================
+   ADD TO CART AREA
+   ========================================================= */
+
+.browse-add-cart-form {
+    flex-shrink: 0;
+
+    min-width: 225px;
+
+    display: flex;
+
+    align-items: end;
+
+    gap: 10px;
+}
+
+
+/* =========================
+   QUANTITY
+   ========================= */
+
+.browse-quantity-field {
+    width: 70px;
+}
+
+
+.browse-quantity-field label {
+    display: block;
+
+    margin-bottom: 6px;
+
+    color: #666666;
+
+    font-size: 11px;
+
+    font-weight: 700;
+}
+
+
+.browse-quantity-field input {
+    width: 100%;
+
+    height: 41px;
+
+    padding: 0 9px;
+
+    border: 1px solid #d3d3d3;
+
+    border-radius: 9px;
+
+    background-color: #ffffff;
+
+    color: #202020;
+
+    font-size: 13px;
+
+    text-align: center;
+
+    outline: none;
+}
+
+
+.browse-quantity-field input:focus {
+    border-color: #ff7a21;
+
+    box-shadow: 0 0 0 3px rgba(255, 122, 33, 0.12);
+}
+
+
+/* =========================
+   ADD CART BUTTON
+   ========================= */
+
+.browse-add-cart-button {
+    height: 41px;
+
+    flex: 1;
+
+    padding: 0 16px;
+
+    border: 2px solid #ff7a21;
+
+    border-radius: 9px;
+
+    background-color: #ffffff;
+
+    color: #202020;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+
+.browse-add-cart-button:hover {
+    background-color: #ff7a21;
+
+    color: #ffffff;
+
+    transform: translateY(-1px);
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    .browse-menu-content {
+        padding: 45px 35px;
+    }
+
+
+    .browse-menu-filter-card {
+        flex-direction: column;
+
+        align-items: stretch;
+    }
+
+
+    .browse-food-card {
+        flex-direction: column;
+
+        align-items: stretch;
+    }
+
+
+    .browse-add-cart-form {
+        width: 100%;
+
+        min-width: 0;
+    }
+
+}
+
+
+@media (max-width: 650px) {
+
+    .browse-menu-page {
+        padding: 14px;
+    }
+
+
+    .browse-menu-shell {
+        min-height: calc(100vh - 28px);
+
+        border-radius: 22px;
+    }
+
+
+    .browse-menu-content {
+        padding: 35px 20px;
+    }
+
+
+    .browse-menu-header {
+        flex-direction: column;
+    }
+
+
+    .browse-menu-header-actions {
+        width: 100%;
+
+        flex-direction: column;
+    }
+
+
+    .browse-menu-header-actions a {
+        width: 100%;
+
+        justify-content: center;
+
+        text-align: center;
+    }
+
+
+    .browse-menu-filter-card .browse-filter-form {
+        flex-direction: column;
+
+        align-items: stretch;
+    }
+
+
+    .browse-menu-filter-card .browse-filter-field {
+        width: 100%;
+    }
+
+
+    .browse-food-top {
+        flex-direction: column;
+
+        gap: 8px;
+    }
+
+
+    .browse-food-price {
+        font-size: 20px;
+    }
+
+
+    .browse-add-cart-form {
+        align-items: stretch;
+
+        flex-direction: column;
+    }
+
+
+    .browse-quantity-field {
+        width: 100%;
+    }
+
+
+    .browse-add-cart-button {
+        width: 100%;
+    }
+
+
+    .browse-menu-scroll-area {
+        max-height: none;
+
+        overflow: visible;
+    }
+}
+
+/* =========================================================
+   CART PAGE
+   ========================================================= */
+
+
+/* =========================
+   PAGE
+   ========================= */
+
+.cart-page {
+    min-height: 100vh;
+
+    padding: 28px;
+
+    background-color: #ff7a21;
+
+    color: #202020;
+}
+
+
+/* =========================
+   WHITE INNER AREA
+   ========================= */
+
+.cart-shell {
+    position: relative;
+
+    width: 100%;
+
+    min-height: calc(100vh - 56px);
+
+    background-color: #f9f9f9;
+
+    border-radius: 28px;
+
+    overflow: hidden;
+}
+
+
+/* =========================
+   CONTENT
+   ========================= */
+
+.cart-content {
+    position: relative;
+
+    z-index: 1;
+
+    width: min(1000px, 100%);
+
+    margin: 0 auto;
+
+    padding: 50px 60px 60px;
+}
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.cart-header {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: flex-start;
+
+    gap: 30px;
+
+    margin-bottom: 25px;
+}
+
+
+.cart-header h1 {
+    margin: 0;
+
+    font-family: "Playfair Display", Georgia, serif;
+
+    font-size: clamp(38px, 4vw, 48px);
+}
+
+
+.cart-header > div > p:last-child {
+    margin: 10px 0 0;
+
+    color: #707070;
+
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   MESSAGE
+   ========================================================= */
+
+.cart-message {
+    margin-bottom: 20px;
+
+    padding: 11px 15px;
+
+    background-color: #fff1e7;
+
+    border: 1px solid #ffc69f;
+
+    border-left: 4px solid #ff7a21;
+
+    border-radius: 8px;
+
+    color: #944000;
+
+    font-size: 13px;
+
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   RECEIPT
+   ========================================================= */
+
+.cart-receipt {
+    width: 100%;
+
+    max-width: 820px;
+
+    margin: 0 auto;
+
+    padding: 32px 36px;
+
+    background-color: #ffffff;
+
+    border: 1px solid #dedede;
+
+    border-radius: 8px;
+
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.07);
+}
+
+
+/* =========================
+   RECEIPT TOP
+   ========================= */
+
+.cart-receipt-top {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: flex-end;
+
+    gap: 20px;
+}
+
+
+.cart-receipt-top p {
+    margin: 0 0 4px;
+
+    color: #e85c00;
+
+    font-family: "Playfair Display", Georgia, serif;
+
+    font-size: 15px;
+
+    font-weight: 800;
+}
+
+
+.cart-receipt-top h2 {
+    margin: 0;
+
+    font-family: "Playfair Display", Georgia, serif;
+
+    font-size: 29px;
+}
+
+
+.cart-receipt-top > span {
+    color: #777777;
+
+    font-size: 12px;
+
+    font-weight: 700;
+}
+
+
+/* =========================
+   DASHED RECEIPT LINE
+   ========================= */
+
+.cart-dashed-line {
+    width: 100%;
+
+    margin: 21px 0;
+
+    border-top: 1px dashed #bdbdbd;
+}
+
+
+/* =========================================================
+   TABLE
+   ========================================================= */
+
+.cart-table-header,
+.cart-item-row {
+    display: grid;
+
+    grid-template-columns:
+        minmax(200px, 1.7fr)
+        0.7fr
+        0.45fr
+        0.8fr;
+
+    gap: 20px;
+
+    align-items: center;
+}
+
+
+/* =========================
+   TABLE HEADER
+   ========================= */
+
+.cart-table-header {
+    color: #858585;
+
+    font-size: 11px;
+
+    font-weight: 800;
+
+    letter-spacing: 0.8px;
+
+    text-transform: uppercase;
+}
+
+
+.cart-table-header span:not(:first-child) {
+    text-align: right;
+}
+
+
+/* =========================
+   ITEMS
+   ========================= */
+
+.cart-item-list {
+    display: flex;
+
+    flex-direction: column;
+}
+
+
+.cart-item-row {
+    padding: 13px 0;
+
+    border-bottom: 1px solid #eeeeee;
+
+    font-size: 13px;
+}
+
+
+.cart-item-row:last-child {
+    border-bottom: none;
+}
+
+
+.cart-item-row > span,
+.cart-item-row > strong {
+    text-align: right;
+}
+
+
+.cart-item-name {
+    min-width: 0;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 5px;
+}
+
+
+.cart-item-name strong {
+    font-size: 14px;
+}
+
+
+.cart-item-name a {
+    width: fit-content;
+
+    color: #c64a00;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    text-decoration: none;
+}
+
+
+.cart-item-name a:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================================================
+   COUPON
+   ========================================================= */
+
+.cart-coupon-section {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: end;
+
+    gap: 25px;
+}
+
+
+.cart-section-label {
+    margin: 0 0 4px;
+
+    color: #e85c00;
+
+    font-size: 10px;
+
+    font-weight: 800;
+
+    letter-spacing: 1.3px;
+}
+
+
+.cart-coupon-section h3 {
+    margin: 0;
+
+    font-family: "Playfair Display", Georgia, serif;
+
+    font-size: 21px;
+}
+
+
+/* =========================
+   COUPON FORM
+   ========================= */
+
+.cart-coupon-form {
+    display: flex;
+
+    gap: 8px;
+}
+
+
+.cart-coupon-form input {
+    width: 210px;
+
+    height: 40px;
+
+    padding: 0 12px;
+
+    border: 1px solid #cfcfcf;
+
+    border-radius: 5px;
+
+    font-size: 13px;
+
+    outline: none;
+}
+
+
+.cart-coupon-form input:focus {
+    border-color: #ff7a21;
+
+    box-shadow: 0 0 0 3px rgba(255, 122, 33, 0.10);
+}
+
+
+.cart-coupon-form button {
+    height: 40px;
+
+    padding: 0 17px;
+
+    border: none;
+
+    border-radius: 5px;
+
+    background-color: #202020;
+
+    color: #ffffff;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+
+.cart-coupon-form button:hover {
+    background-color: #000000;
+}
+
+
+/* =========================================================
+   SUMMARY
+   ========================================================= */
+
+.cart-summary {
+    margin-left: auto;
+
+    width: min(360px, 100%);
+}
+
+
+.cart-summary-row {
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    padding: 7px 0;
+
+    font-size: 13px;
+}
+
+
+.cart-summary-row span {
+    color: #666666;
+}
+
+
+.cart-discount-row strong {
+    color: #d95800;
+}
+
+
+/* =========================
+   TOTAL
+   ========================= */
+
+.cart-total-row {
+    margin-top: 10px;
+
+    padding-top: 14px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    border-top: 2px solid #202020;
+}
+
+
+.cart-total-row span {
+    font-size: 15px;
+
+    font-weight: 800;
+}
+
+
+.cart-total-row strong {
+    font-family: "Playfair Display", Georgia, serif;
+
+    font-size: 25px;
+}
+
+
+/* =========================================================
+   PLACE ORDER
+   ========================================================= */
+
+.cart-place-order-button {
+    width: 100%;
+
+    margin-top: 25px;
+
+    padding: 14px 19px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    border: none;
+
+    border-radius: 6px;
+
+    background-color: #ff7a21;
+
+    color: #ffffff;
+
+    font-size: 14px;
+
+    font-weight: 800;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+
+.cart-place-order-button span {
+    font-size: 20px;
+}
+
+
+.cart-place-order-button:hover {
+    background-color: #e96816;
+
+    transform: translateY(-1px);
+}
+
+
+/* =========================
+   RECEIPT NOTE
+   ========================= */
+
+.cart-receipt-note {
+    margin: 14px 0 0;
+
+    color: #8a8a8a;
+
+    font-size: 11px;
+
+    line-height: 1.5;
+
+    text-align: center;
+}
+
+
+/* =========================================================
+   EMPTY CART
+   ========================================================= */
+
+.cart-empty-state {
+    max-width: 650px;
+
+    margin: 80px auto;
+
+    padding: 55px 35px;
+
+    background-color: #ffffff;
+
+    border: 1px dashed #bfbfbf;
+
+    border-radius: 10px;
+
+    text-align: center;
+}
+
+
+.cart-empty-state h2 {
+    margin: 0 0 10px;
+
+    font-family: "Playfair Display", Georgia, serif;
+
+    font-size: 30px;
+}
+
+
+.cart-empty-state > p:not(.browse-page-label) {
+    margin: 0 0 22px;
+
+    color: #777777;
+
+    font-size: 14px;
+}
+
+
+.cart-empty-state a {
+    color: #e85c00;
+
+    font-weight: 700;
+
+    text-decoration: none;
+}
+
+
+.cart-empty-state a:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    .cart-page {
+        padding: 14px;
+    }
+
+
+    .cart-shell {
+        min-height: calc(100vh - 28px);
+
+        border-radius: 22px;
+    }
+
+
+    .cart-content {
+        padding: 35px 20px;
+    }
+
+
+    .cart-header {
+        flex-direction: column;
+    }
+
+
+    .cart-header .browse-back-button {
+        width: 100%;
+
+        text-align: center;
+    }
+
+
+    .cart-receipt {
+        padding: 26px 20px;
+    }
+
+
+    .cart-table-header {
+        display: none;
+    }
+
+
+    .cart-item-row {
+        grid-template-columns: 1fr auto;
+
+        gap: 8px 20px;
+
+        padding: 15px 0;
+    }
+
+
+    .cart-item-name {
+        grid-column: 1 / -1;
+    }
+
+
+    .cart-item-row > span {
+        text-align: left;
+    }
+
+
+    .cart-item-row > span:nth-of-type(2)::before {
+        content: "Qty: ";
+
+        color: #888888;
+    }
+
+
+    .cart-item-row > span:first-of-type {
+        display: none;
+    }
+
+
+    .cart-item-row > strong {
+        text-align: right;
+    }
+
+
+    .cart-coupon-section {
+        flex-direction: column;
+
+        align-items: stretch;
+    }
+
+
+    .cart-coupon-form {
+        width: 100%;
+    }
+
+
+    .cart-coupon-form input {
+        width: auto;
+
+        flex: 1;
+    }
+}
+
+
+/* =========================================================
+   CUSTOMER ACTIVE ORDERS / DELIVERY STATUS
+   ========================================================= */
+
+
+/* =========================
+   PAGE
+   ========================= */
+
+.customer-orders-page {
+    min-height: 100vh;
+
+    padding: 28px;
+
+    background-color: #ff7a21;
+
+    color: #202020;
+}
+
+
+/* =========================
+   WHITE INNER AREA
+   ========================= */
+
+.customer-orders-shell {
+    position: relative;
+
+    width: 100%;
+
+    min-height: calc(100vh - 56px);
+
+    background-color: #f9f9f9;
+
+    border-radius: 28px;
+
+    overflow: hidden;
+}
+
+
+/* =========================
+   CONTENT
+   ========================= */
+
+.customer-orders-content {
+    position: relative;
+
+    z-index: 1;
+
+    width: min(1100px, 100%);
+
+    margin: 0 auto;
+
+    padding: 52px 65px 60px;
+}
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.customer-orders-header {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: flex-start;
+
+    gap: 30px;
+
+    margin-bottom: 25px;
+}
+
+
+.customer-orders-header h1 {
+    margin: 0;
+
+    font-family: "Playfair Display", Georgia, serif;
+
+    font-size: clamp(38px, 4vw, 50px);
+
+    line-height: 1.05;
+}
+
+
+.customer-orders-header > div > p:last-child {
+    max-width: 500px;
+
+    margin: 11px 0 0;
+
+    color: #707070;
+
+    font-size: 14px;
+
+    line-height: 1.55;
+}
+
+
+/* =========================================================
+   SUMMARY BAR
+   ========================================================= */
+
+.customer-orders-summary {
+    margin-bottom: 26px;
+
+    padding: 17px 21px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 30px;
+
+    background-color: rgba(255, 255, 255, 0.96);
+
+    border: 1px solid #e8e8e8;
+
+    border-radius: 15px;
+
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.04);
+}
+
+
+.customer-orders-summary > div {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+}
+
+
+.customer-orders-summary span {
+    color: #e85c00;
+
+    font-size: 11px;
+
+    font-weight: 800;
+
+    letter-spacing: 1.3px;
+}
+
+
+.customer-orders-summary strong {
+    min-width: 32px;
+
+    height: 32px;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background-color: #ff7a21;
+
+    border-radius: 50%;
+
+    color: #ffffff;
+
+    font-size: 13px;
+}
+
+
+.customer-orders-summary p {
+    margin: 0;
+
+    max-width: 570px;
+
+    color: #777777;
+
+    font-size: 12px;
+
+    line-height: 1.5;
+
+    text-align: right;
+}
+
+
+/* =========================================================
+   ORDER LIST
+   ========================================================= */
+
+.customer-orders-list {
+    max-height: 610px;
+
+    padding-right: 10px;
+
+    overflow-y: auto;
+
+    scrollbar-width: thin;
+
+    scrollbar-color: #ff7a21 #eeeeee;
+}
+
+
+.customer-orders-list::-webkit-scrollbar {
+    width: 8px;
+}
+
+
+.customer-orders-list::-webkit-scrollbar-track {
+    background-color: #eeeeee;
+
+    border-radius: 20px;
+}
+
+
+.customer-orders-list::-webkit-scrollbar-thumb {
+    background-color: #ff7a21;
+
+    border-radius: 20px;
+}
+
+
+/* =========================================================
+   ORDER CARD
+   ========================================================= */
+
+.customer-order-card {
+    margin-bottom: 18px;
+
+    padding: 27px 29px;
+
+    background-color: rgba(255, 255, 255, 0.97);
+
+    border: 1px solid #e4e4e4;
+
+    border-left: 5px solid #ff7a21;
+
+    border-radius: 18px;
+
+    box-shadow: 0 7px 22px rgba(0, 0, 0, 0.055);
+}
+
+
+.customer-order-card:last-child {
+    margin-bottom: 0;
+}
+
+
+/* =========================================================
+   ORDER TOP
+   ========================================================= */
+
+.customer-order-top {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: flex-start;
+
+    gap: 25px;
+}
+
+
+.customer-order-number {
+    margin: 0 0 5px;
+
+    color: #e85c00;
+
+    font-size: 10px;
+
+    font-weight: 800;
+
+    letter-spacing: 1.4px;
+}
+
+
+.customer-order-top h2 {
+    margin: 0;
+
+    font-family: "Playfair Display", Georgia, serif;
+
+    font-size: 27px;
+}
+
+
+.customer-order-date {
+    margin: 8px 0 0;
+
+    color: #808080;
+
+    font-size: 12px;
+}
+
+
+/* =========================
+   STATUS BADGE
+   ========================= */
+
+.customer-order-status {
+    flex-shrink: 0;
+
+    padding: 8px 13px;
+
+    border-radius: 50px;
+
+    font-size: 11px;
+
+    font-weight: 800;
+
+    letter-spacing: 0.3px;
+}
+
+
+.customer-order-status.pending {
+    background-color: #fff0e6;
+
+    color: #d85800;
+}
+
+
+.customer-order-status.delivering {
+    background-color: #202020;
+
+    color: #ffffff;
+}
+
+
+/* =========================================================
+   TRACKER
+   ========================================================= */
+
+.order-tracker {
+    margin: 28px 10px 25px;
+
+    display: flex;
+
+    align-items: flex-start;
+}
+
+
+.tracker-step {
+    width: 90px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 7px;
+
+    color: #a0a0a0;
+}
+
+
+.tracker-dot {
+    width: 29px;
+
+    height: 29px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    background-color: #e4e4e4;
+
+    border: 3px solid #f4f4f4;
+
+    border-radius: 50%;
+
+    color: #888888;
+
+    font-size: 10px;
+
+    font-weight: 800;
+
+    box-shadow: 0 0 0 1px #dddddd;
+}
+
+
+.tracker-step span {
+    font-size: 11px;
+
+    font-weight: 700;
+}
+
+
+/* =========================
+   ACTIVE TRACKER
+   ========================= */
+
+.tracker-step.active {
+    color: #202020;
+}
+
+
+.tracker-step.active .tracker-dot {
+    background-color: #ff7a21;
+
+    border-color: #fff0e6;
+
+    color: #ffffff;
+
+    box-shadow: 0 0 0 1px #ff7a21;
+}
+
+
+/* =========================
+   TRACKER LINE
+   ========================= */
+
+.tracker-line {
+    height: 3px;
+
+    margin-top: 13px;
+
+    flex: 1;
+
+    background-color: #dddddd;
+}
+
+
+.tracker-line.active {
+    background-color: #ff7a21;
+}
+
+
+/* =========================================================
+   STATUS MESSAGE
+   ========================================================= */
+
+.customer-order-status-message {
+    margin-bottom: 23px;
+
+    padding: 13px 16px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 4px;
+
+    background-color: #fafafa;
+
+    border-left: 3px solid #ff7a21;
+}
+
+
+.customer-order-status-message strong {
+    font-size: 13px;
+}
+
+
+.customer-order-status-message span {
+    color: #777777;
+
+    font-size: 12px;
+
+    line-height: 1.4;
+}
+
+
+/* =========================================================
+   ORDER ITEMS
+   ========================================================= */
+
+.customer-order-items {
+    padding: 18px 0;
+
+    border-top: 1px dashed #cccccc;
+
+    border-bottom: 1px dashed #cccccc;
+}
+
+
+.customer-order-section-label {
+    margin: 0 0 11px;
+
+    color: #888888;
+
+    font-size: 10px;
+
+    font-weight: 800;
+
+    letter-spacing: 1.3px;
+}
+
+
+.customer-order-item-row {
+    padding: 8px 0;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 20px;
+
+    font-size: 13px;
+}
+
+
+.customer-order-item-row > div {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 3px;
+}
+
+
+.customer-order-item-row > div > strong {
+    font-size: 13px;
+}
+
+
+.customer-order-item-row span {
+    color: #858585;
+
+    font-size: 11px;
+}
+
+
+/* =========================================================
+   ORDER BOTTOM
+   ========================================================= */
+
+.customer-order-bottom {
+    margin-top: 21px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 25px;
+}
+
+
+/* =========================
+   TOTAL
+   ========================= */
+
+.customer-order-total {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 3px;
+}
+
+
+.customer-order-total span {
+    color: #777777;
+
+    font-size: 11px;
+}
+
+
+.customer-order-total strong {
+    font-family: "Playfair Display", Georgia, serif;
+
+    font-size: 24px;
+}
+
+
+/* =========================================================
+   CONFIRM RECEIVED
+   ========================================================= */
+
+.confirm-received-button {
+    min-width: 190px;
+
+    padding: 12px 17px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 20px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background-color: #202020;
+
+    color: #ffffff;
+
+    font-size: 12px;
+
+    font-weight: 800;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+
+.confirm-received-button span {
+    width: 22px;
+
+    height: 22px;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background-color: #ff7a21;
+
+    border-radius: 50%;
+
+    color: #ffffff;
+}
+
+
+.confirm-received-button:hover {
+    background-color: #000000;
+
+    transform: translateY(-1px);
+}
+
+
+/* =========================================================
+   EMPTY STATE
+   ========================================================= */
+
+.customer-orders-empty {
+    margin: 70px auto;
+
+    max-width: 650px;
+
+    padding: 55px 35px;
+
+    background-color: rgba(255, 255, 255, 0.97);
+
+    border: 1px dashed #c6c6c6;
+
+    border-radius: 16px;
+
+    text-align: center;
+}
+
+
+.customer-orders-empty h2 {
+    margin: 0 0 10px;
+
+    font-family: "Playfair Display", Georgia, serif;
+
+    font-size: 29px;
+}
+
+
+.customer-orders-empty > p:not(.browse-page-label) {
+    margin: 0 0 20px;
+
+    color: #777777;
+
+    font-size: 13px;
+
+    line-height: 1.5;
+}
+
+
+.customer-orders-empty a {
+    color: #e85c00;
+
+    font-weight: 700;
+
+    text-decoration: none;
+}
+
+
+.customer-orders-empty a:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 750px) {
+
+    .customer-orders-page {
+        padding: 14px;
+    }
+
+
+    .customer-orders-shell {
+        min-height: calc(100vh - 28px);
+
+        border-radius: 22px;
+    }
+
+
+    .customer-orders-content {
+        padding: 35px 20px;
+    }
+
+
+    .customer-orders-header {
+        flex-direction: column;
+    }
+
+
+    .customer-orders-header .browse-back-button {
+        width: 100%;
+
+        text-align: center;
+    }
+
+
+    .customer-orders-summary {
+        align-items: flex-start;
+
+        flex-direction: column;
+    }
+
+
+    .customer-orders-summary p {
+        text-align: left;
+    }
+
+
+    .customer-order-top {
+        flex-direction: column;
+
+        gap: 14px;
+    }
+
+
+    .customer-order-status {
+        align-self: flex-start;
+    }
+
+
+    .order-tracker {
+        margin-left: 0;
+
+        margin-right: 0;
+    }
+
+
+    .tracker-step {
+        width: 72px;
+    }
+
+
+    .customer-order-bottom {
+        flex-direction: column;
+
+        align-items: stretch;
+    }
+
+
+    .confirm-received-button {
+        width: 100%;
+    }
+
+
+    .customer-orders-list {
+        max-height: none;
+
+        overflow: visible;
+    }
+}
+
+/* =========================================================
+   CUSTOMER REVIEW PAGE
+   ========================================================= */
+
+
+/* =========================
+   PAGE
+   ========================= */
+
+.review-page {
+    min-height: 100vh;
+
+    padding: 28px;
+
+    background-color: #ff7a21;
+
+    color: #202020;
+}
+
+
+/* =========================
+   WHITE INNER AREA
+   ========================= */
+
+.review-shell {
+    position: relative;
+
+    width: 100%;
+
+    min-height: calc(100vh - 56px);
+
+    background-color: #f9f9f9;
+
+    border-radius: 28px;
+
+    overflow: hidden;
+}
+
+
+/* =========================
+   CONTENT
+   ========================= */
+
+.review-content {
+    position: relative;
+
+    z-index: 1;
+
+    width: min(950px, 100%);
+
+    margin: 0 auto;
+
+    padding: 52px 60px 60px;
+}
+
+
+/* =========================================================
+   PAGE HEADER
+   ========================================================= */
+
+.review-header {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: flex-start;
+
+    gap: 30px;
+
+    margin-bottom: 28px;
+}
+
+
+.review-header h1 {
+    margin: 0;
+
+    font-family: "Playfair Display", Georgia, serif;
+
+    font-size: clamp(38px, 4vw, 50px);
+
+    line-height: 1.05;
+}
+
+
+.review-header > div > p:last-child {
+    margin: 12px 0 0;
+
+    color: #707070;
+
+    font-size: 14px;
+
+    line-height: 1.55;
+}
+
+
+.review-header > div > p:last-child strong {
+    color: #202020;
+}
+
+
+/* =========================================================
+   REVIEW CARD
+   ========================================================= */
+
+.review-card {
+    max-width: 760px;
+
+    margin: 0 auto;
+
+    padding: 33px 38px;
+
+    background-color: rgba(255, 255, 255, 0.97);
+
+    border: 1px solid #e5e5e5;
+
+    border-top: 5px solid #ff7a21;
+
+    border-radius: 18px;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
+}
+
+
+/* =========================
+   CARD TOP
+   ========================= */
+
+.review-card-top {
+    text-align: center;
+
+    margin-bottom: 23px;
+}
+
+
+.review-card-label {
+    margin: 0 0 7px;
+
+    color: #e85c00;
+
+    font-size: 10px;
+
+    font-weight: 800;
+
+    letter-spacing: 1.5px;
+}
+
+
+.review-card-top h2 {
+    margin: 0;
+
+    font-family: "Playfair Display", Georgia, serif;
+
+    font-size: 31px;
+}
+
+
+.review-card-top > p:last-child {
+    margin: 9px auto 0;
+
+    max-width: 480px;
+
+    color: #777777;
+
+    font-size: 13px;
+
+    line-height: 1.5;
+}
+
+
+/* =========================================================
+   EXISTING REVIEW MESSAGE
+   ========================================================= */
+
+.review-existing-message {
+    margin-bottom: 24px;
+
+    padding: 12px 15px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 3px;
+
+    background-color: #fff3ea;
+
+    border-left: 4px solid #ff7a21;
+
+    border-radius: 8px;
+}
+
+
+.review-existing-message strong {
+    color: #a74600;
+
+    font-size: 12px;
+}
+
+
+.review-existing-message span {
+    color: #777777;
+
+    font-size: 11px;
+}
+
+
+/* =========================================================
+   SECTIONS
+   ========================================================= */
+
+.review-section-heading {
+    margin-bottom: 17px;
+}
+
+
+.review-section-heading > span {
+    display: block;
+
+    margin-bottom: 5px;
+
+    color: #e85c00;
+
+    font-size: 10px;
+
+    font-weight: 800;
+
+    letter-spacing: 1.3px;
+}
+
+
+.review-section-heading h3 {
+    margin: 0;
+
+    font-family: "Playfair Display", Georgia, serif;
+
+    font-size: 23px;
+}
+
+
+.review-section-heading p {
+    margin: 6px 0 0;
+
+    color: #828282;
+
+    font-size: 12px;
+
+    line-height: 1.4;
+}
+
+
+/* =========================================================
+   RATING OPTIONS
+   ========================================================= */
+
+.review-rating-options {
+    display: grid;
+
+    grid-template-columns: repeat(5, 1fr);
+
+    gap: 10px;
+}
+
+
+/* Hide actual radio buttons */
+
+.review-rating-options input[type="radio"] {
+    position: absolute;
+
+    opacity: 0;
+
+    pointer-events: none;
+}
+
+
+/* =========================
+   RATING CARD
+   ========================= */
+
+.review-rating-options label {
+    min-height: 96px;
+
+    padding: 12px 8px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 3px;
+
+    background-color: #fafafa;
+
+    border: 2px solid #e2e2e2;
+
+    border-radius: 12px;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.2s ease,
+        border-color 0.2s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+.review-star {
+    color: #c4c4c4;
+
+    font-size: 23px;
+
+    line-height: 1;
+
+    transition: color 0.2s ease;
+}
+
+
+.review-rating-options label strong {
+    font-size: 14px;
+}
+
+
+.review-rating-options label small {
+    color: #858585;
+
+    font-size: 10px;
+}
+
+
+/* =========================
+   RATING HOVER
+   ========================= */
+
+.review-rating-options label:hover {
+    border-color: #ffad75;
+
+    transform: translateY(-2px);
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.055);
+}
+
+
+.review-rating-options label:hover .review-star {
+    color: #ff7a21;
+}
+
+
+/* =========================
+   SELECTED RATING
+   ========================= */
+
+.review-rating-options input[type="radio"]:checked + label {
+    background-color: #fff1e7;
+
+    border-color: #ff7a21;
+
+    box-shadow: 0 5px 16px rgba(255, 122, 33, 0.12);
+}
+
+
+.review-rating-options input[type="radio"]:checked + label .review-star {
+    color: #ff7a21;
+}
+
+
+.review-rating-options input[type="radio"]:checked + label small {
+    color: #c65305;
+
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   DIVIDER
+   ========================================================= */
+
+.review-divider {
+    margin: 27px 0;
+
+    border-top: 1px dashed #cccccc;
+}
+
+
+/* =========================================================
+   COMMENT
+   ========================================================= */
+
+.review-comment-box textarea {
+    width: 100%;
+
+    min-height: 145px;
+
+    resize: vertical;
+
+    padding: 14px 15px;
+
+    background-color: #fafafa;
+
+    border: 1px solid #d3d3d3;
+
+    border-radius: 10px;
+
+    color: #202020;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 13px;
+
+    line-height: 1.55;
+
+    outline: none;
+
+    transition: 0.2s;
+}
+
+
+.review-comment-box textarea:focus {
+    background-color: #ffffff;
+
+    border-color: #ff7a21;
+
+    box-shadow: 0 0 0 3px rgba(255, 122, 33, 0.10);
+}
+
+
+.review-comment-box textarea::placeholder {
+    color: #999999;
+}
+
+
+.review-comment-box > span {
+    display: block;
+
+    margin-top: 6px;
+
+    color: #999999;
+
+    font-size: 10px;
+
+    text-align: right;
+}
+
+
+/* =========================================================
+   ACTION BUTTONS
+   ========================================================= */
+
+.review-actions {
+    margin-top: 27px;
+
+    display: grid;
+
+    grid-template-columns: 0.65fr 1.35fr;
+
+    gap: 11px;
+}
+
+
+/* =========================
+   SKIP / CANCEL
+   ========================= */
+
+.review-skip-button {
+    min-height: 46px;
+
+    padding: 0 16px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border: 2px solid #dedede;
+
+    border-radius: 10px;
+
+    color: #555555;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    text-decoration: none;
+
+    transition: 0.2s ease;
+}
+
+
+.review-skip-button:hover {
+    border-color: #202020;
+
+    color: #202020;
+
+    background-color: #f5f5f5;
+}
+
+
+/* =========================
+   SAVE BUTTON
+   ========================= */
+
+.review-submit-button {
+    min-height: 46px;
+
+    padding: 0 18px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 20px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background-color: #202020;
+
+    color: #ffffff;
+
+    font-size: 13px;
+
+    font-weight: 800;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+
+.review-submit-button span {
+    color: #ff7a21;
+
+    font-size: 19px;
+
+    transition: transform 0.2s ease;
+}
+
+
+.review-submit-button:hover {
+    background-color: #000000;
+
+    transform: translateY(-1px);
+}
+
+
+.review-submit-button:hover span {
+    transform: translateX(3px);
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    .review-page {
+        padding: 14px;
+    }
+
+
+    .review-shell {
+        min-height: calc(100vh - 28px);
+
+        border-radius: 22px;
+    }
+
+
+    .review-content {
+        padding: 35px 20px;
+    }
+
+
+    .review-header {
+        flex-direction: column;
+    }
+
+
+    .review-header .browse-back-button {
+        width: 100%;
+
+        text-align: center;
+    }
+
+
+    .review-card {
+        padding: 28px 21px;
+    }
+
+
+    .review-rating-options {
+        grid-template-columns:
+            repeat(5, minmax(50px, 1fr));
+
+        gap: 6px;
+    }
+
+
+    .review-rating-options label {
+        min-height: 85px;
+
+        padding: 9px 4px;
+    }
+
+
+    .review-rating-options label small {
+        display: none;
+    }
+
+
+    .review-actions {
+        grid-template-columns: 1fr;
+    }
+
+
+    .review-submit-button {
+        order: -1;
+    }
+}
+
+/* =========================================================
+   ORDER HISTORY
+   ========================================================= */
+
+
+/* =========================
+   PAGE
+   ========================= */
+
+.order-history-page {
+    min-height: 100vh;
+
+    padding: 28px;
+
+    background-color: #ff7a21;
+
+    color: #202020;
+}
+
+
+/* =========================
+   WHITE INNER AREA
+   ========================= */
+
+.order-history-shell {
+    position: relative;
+
+    width: 100%;
+
+    min-height: calc(100vh - 56px);
+
+    background-color: #f9f9f9;
+
+    border-radius: 28px;
+
+    overflow: hidden;
+}
+
+
+/* =========================
+   CONTENT
+   ========================= */
+
+.order-history-content {
+    position: relative;
+
+    z-index: 1;
+
+    width: min(1100px, 100%);
+
+    margin: 0 auto;
+
+    padding: 52px 65px 60px;
+}
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.order-history-header {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: flex-start;
+
+    gap: 30px;
+
+    margin-bottom: 25px;
+}
+
+
+.order-history-header h1 {
+    margin: 0;
+
+    font-family: "Playfair Display", Georgia, serif;
+
+    font-size: clamp(38px, 4vw, 50px);
+
+    line-height: 1.05;
+}
+
+
+.order-history-header > div > p:last-child {
+    margin: 11px 0 0;
+
+    color: #707070;
+
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   FILTER CARD
+   ========================================================= */
+
+.order-history-filter-card {
+    margin-bottom: 20px;
+
+    padding: 19px 23px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: end;
+
+    gap: 30px;
+
+    background-color: rgba(255, 255, 255, 0.96);
+
+    border: 1px solid #e6e6e6;
+
+    border-radius: 16px;
+
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.045);
+}
+
+
+.order-history-filter-card h2 {
+    margin: 0;
+
+    font-family: "Playfair Display", Georgia, serif;
+
+    font-size: 24px;
+}
+
+
+/* =========================
+   FILTER FORM
+   ========================= */
+
+.order-history-filter-form {
+    display: flex;
+
+    align-items: end;
+
+    gap: 10px;
+}
+
+
+.order-history-filter-field {
+    min-width: 170px;
+}
+
+
+.order-history-filter-field label {
+    display: block;
+
+    margin-bottom: 6px;
+
+    font-size: 11px;
+
+    font-weight: 700;
+}
+
+
+.order-history-filter-field select {
+    width: 100%;
+
+    height: 41px;
+
+    padding: 0 10px;
+
+    background-color: #ffffff;
+
+    border: 1px solid #d0d0d0;
+
+    border-radius: 8px;
+
+    color: #202020;
+
+    font-size: 12px;
+
+    outline: none;
+}
+
+
+.order-history-filter-field select:focus {
+    border-color: #ff7a21;
+
+    box-shadow: 0 0 0 3px rgba(255, 122, 33, 0.10);
+}
+
+
+.order-history-apply-button {
+    height: 41px;
+
+    padding: 0 17px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background-color: #202020;
+
+    color: #ffffff;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+
+.order-history-apply-button:hover {
+    background-color: #000000;
+}
+
+
+/* =========================================================
+   RESULT COUNT
+   ========================================================= */
+
+.order-history-list-heading {
+    margin-bottom: 12px;
+
+    text-align: right;
+}
+
+
+.order-history-list-heading span {
+    color: #777777;
+
+    font-size: 12px;
+}
+
+
+/* =========================================================
+   SCROLLABLE LIST
+   ========================================================= */
+
+.order-history-list {
+    max-height: 590px;
+
+    padding-right: 10px;
+
+    overflow-y: auto;
+
+    scrollbar-width: thin;
+
+    scrollbar-color: #ff7a21 #eeeeee;
+}
+
+
+.order-history-list::-webkit-scrollbar {
+    width: 8px;
+}
+
+
+.order-history-list::-webkit-scrollbar-track {
+    background-color: #eeeeee;
+
+    border-radius: 20px;
+}
+
+
+.order-history-list::-webkit-scrollbar-thumb {
+    background-color: #ff7a21;
+
+    border-radius: 20px;
+}
+
+
+/* =========================================================
+   ORDER CARD
+   ========================================================= */
+
+.history-order-card {
+    margin-bottom: 14px;
+
+    padding: 22px 24px;
+
+    background-color: rgba(255, 255, 255, 0.97);
+
+    border: 1px solid #e5e5e5;
+
+    border-left: 4px solid #ff7a21;
+
+    border-radius: 14px;
+
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.04);
+}
+
+
+.history-order-card:last-child {
+    margin-bottom: 0;
+}
+
+
+/* =========================================================
+   ORDER TOP
+   ========================================================= */
+
+.history-order-top {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: flex-start;
+
+    gap: 20px;
+}
+
+
+.history-order-number {
+    margin: 0 0 4px;
+
+    color: #e85c00;
+
+    font-size: 10px;
+
+    font-weight: 800;
+
+    letter-spacing: 1.2px;
+}
+
+
+.history-order-top h2 {
+    margin: 0;
+
+    font-family: "Playfair Display", Georgia, serif;
+
+    font-size: 23px;
+}
+
+
+.history-order-date {
+    margin: 6px 0 0;
+
+    color: #888888;
+
+    font-size: 11px;
+}
+
+
+/* =========================
+   STATUS
+   ========================= */
+
+.history-status {
+    flex-shrink: 0;
+
+    padding: 7px 11px;
+
+    border-radius: 50px;
+
+    font-size: 10px;
+
+    font-weight: 800;
+}
+
+
+.history-status.confirmed {
+    background-color: #eef8ef;
+
+    color: #31783a;
+}
+
+
+.history-status.cancelled {
+    background-color: #f2f2f2;
+
+    color: #777777;
+}
+
+
+/* =========================================================
+   ITEMS
+   ========================================================= */
+
+.history-order-items {
+    margin-top: 17px;
+
+    padding: 13px 0;
+
+    border-top: 1px dashed #cccccc;
+
+    border-bottom: 1px dashed #cccccc;
+}
+
+
+.history-section-label {
+    margin: 0 0 8px;
+
+    color: #888888;
+
+    font-size: 9px;
+
+    font-weight: 800;
+
+    letter-spacing: 1.2px;
+}
+
+
+.history-item-row {
+    padding: 5px 0;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    font-size: 12px;
+}
+
+
+.history-item-row span {
+    color: #555555;
+}
+
+
+/* =========================================================
+   BOTTOM SUMMARY
+   ========================================================= */
+
+.history-order-bottom {
+    margin-top: 15px;
+
+    display: flex;
+
+    justify-content: flex-end;
+
+    gap: 35px;
+}
+
+
+.history-order-bottom > div {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-end;
+
+    gap: 3px;
+}
+
+
+.history-order-bottom span {
+    color: #888888;
+
+    font-size: 10px;
+}
+
+
+.history-order-bottom strong {
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   EMPTY STATE
+   ========================================================= */
+
+.order-history-empty {
+    margin: 70px auto;
+
+    max-width: 600px;
+
+    padding: 50px 30px;
+
+    background-color: rgba(255, 255, 255, 0.97);
+
+    border: 1px dashed #c7c7c7;
+
+    border-radius: 14px;
+
+    text-align: center;
+}
+
+
+.order-history-empty h2 {
+    margin: 0 0 9px;
+
+    font-family: "Playfair Display", Georgia, serif;
+
+    font-size: 28px;
+}
+
+
+.order-history-empty > p:not(.browse-page-label) {
+    margin: 0 0 18px;
+
+    color: #777777;
+
+    font-size: 13px;
+}
+
+
+.order-history-empty a {
+    color: #e85c00;
+
+    font-weight: 700;
+
+    text-decoration: none;
+}
+
+
+.order-history-empty a:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 800px) {
+
+    .order-history-filter-card {
+        flex-direction: column;
+
+        align-items: stretch;
+    }
+
+
+    .order-history-filter-form {
+        width: 100%;
+    }
+
+
+    .order-history-filter-field {
+        flex: 1;
+
+        min-width: 0;
+    }
+}
+
+
+@media (max-width: 650px) {
+
+    .order-history-page {
+        padding: 14px;
+    }
+
+
+    .order-history-shell {
+        min-height: calc(100vh - 28px);
+
+        border-radius: 22px;
+    }
+
+
+    .order-history-content {
+        padding: 35px 20px;
+    }
+
+
+    .order-history-header {
+        flex-direction: column;
+    }
+
+
+    .order-history-header .browse-back-button {
+        width: 100%;
+
+        text-align: center;
+    }
+
+
+    .order-history-filter-form {
+        flex-direction: column;
+
+        align-items: stretch;
+    }
+
+
+    .order-history-filter-field,
+    .order-history-apply-button {
+        width: 100%;
+    }
+
+
+    .history-order-top {
+        flex-direction: column;
+
+        gap: 10px;
+    }
+
+
+    .history-status {
+        align-self: flex-start;
+    }
+
+
+    .history-order-bottom {
+        justify-content: space-between;
+
+        gap: 15px;
+    }
+
+
+    .history-order-bottom > div {
+        align-items: flex-start;
+    }
+
+
+    .order-history-list {
+        max-height: none;
+
+        overflow: visible;
+    }
+}
+
+/* =========================================================
+   RESTAURANT - ADD FOOD
+   ========================================================= */
+
+
+/* =========================
+   PAGE
+   ========================= */
+
+.restaurant-add-food-page {
+    min-height: 100vh;
+
+    padding: 28px;
+
+    background-color: #f3f3f3;
+
+    color: #202020;
+}
+
+
+/* =========================
+   ORANGE INNER SHELL
+   ========================= */
+
+.restaurant-add-food-shell {
+    position: relative;
+
+    width: 100%;
+
+    min-height: calc(100vh - 56px);
+
+    background-color: #ff7a21;
+
+    border-radius: 28px;
+
+    overflow: hidden;
+}
+
+
+/* =========================
+   CONTENT
+   ========================= */
+
+.restaurant-add-food-content {
+    position: relative;
+
+    z-index: 2;
+
+    width: min(950px, 100%);
+
+    margin: 0 auto;
+
+    padding: 52px 60px 60px;
+}
+
+
+/* =========================================================
+   RESTAURANT MANAGEMENT HEADER
+   Reusable for the remaining restaurant pages
+   ========================================================= */
+
+.restaurant-management-header {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: flex-start;
+
+    gap: 30px;
+
+    margin-bottom: 28px;
+
+    color: #ffffff;
+}
+
+
+.restaurant-management-label {
+    margin: 0 0 7px;
+
+    color: rgba(255, 255, 255, 0.78);
+
+    font-size: 10px;
+
+    font-weight: 800;
+
+    letter-spacing: 1.5px;
+}
+
+
+.restaurant-management-header h1 {
+    margin: 0;
+
+    font-family: "Playfair Display", Georgia, serif;
+
+    font-size: clamp(38px, 4vw, 50px);
+
+    line-height: 1.05;
+}
+
+
+.restaurant-management-header > div > p:last-child {
+    margin: 11px 0 0;
+
+    color: rgba(255, 255, 255, 0.82);
+
+    font-size: 14px;
+
+    line-height: 1.5;
+}
+
+
+.restaurant-management-header > div > p:last-child strong {
+    color: #ffffff;
+}
+
+
+.restaurant-management-back {
+    flex-shrink: 0;
+
+    padding: 10px 15px;
+
+    background-color: rgba(255, 255, 255, 0.14);
+
+    border: 1px solid rgba(255, 255, 255, 0.6);
+
+    border-radius: 9px;
+
+    color: #ffffff;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    text-decoration: none;
+
+    transition: 0.2s ease;
+}
+
+
+.restaurant-management-back:hover {
+    background-color: #ffffff;
+
+    color: #202020;
+}
+
+
+/* =========================================================
+   WHITE FORM CARD
+   ========================================================= */
+
+.restaurant-add-food-card {
+    max-width: 760px;
+
+    margin: 0 auto;
+
+    padding: 33px 38px;
+
+    background-color: rgba(255, 255, 255, 0.98);
+
+    border: 1px solid rgba(255, 255, 255, 0.5);
+
+    border-radius: 18px;
+
+    box-shadow: 0 12px 35px rgba(104, 42, 0, 0.16);
+}
+
+
+/* =========================
+   CARD TOP
+   ========================= */
+
+.restaurant-add-food-card-top {
+    margin-bottom: 25px;
+
+    padding-bottom: 21px;
+
+    border-bottom: 1px solid #ececec;
+}
+
+
+.restaurant-card-label {
+    margin: 0 0 5px;
+
+    color: #e65d00;
+
+    font-size: 10px;
+
+    font-weight: 800;
+
+    letter-spacing: 1.4px;
+}
+
+
+.restaurant-add-food-card-top h2 {
+    margin: 0;
+
+    font-family: "Playfair Display", Georgia, serif;
+
+    font-size: 30px;
+}
+
+
+.restaurant-add-food-card-top > p:last-child {
+    margin: 7px 0 0;
+
+    color: #808080;
+
+    font-size: 12px;
+}
+
+
+/* =========================================================
+   ERROR MESSAGE
+   ========================================================= */
+
+.restaurant-form-message {
+    margin-bottom: 20px;
+
+    padding: 12px 14px;
+
+    background-color: #fff0e6;
+
+    border-left: 4px solid #ff7a21;
+
+    border-radius: 7px;
+
+    color: #af4700;
+
+    font-size: 12px;
+
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   FORM
+   ========================================================= */
+
+.restaurant-food-form {
+    display: grid;
+
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 19px 17px;
+}
+
+
+.restaurant-form-full {
+    grid-column: 1 / -1;
+}
+
+
+/* =========================
+   FORM GROUP
+   ========================= */
+
+.restaurant-form-group label {
+    display: block;
+
+    margin-bottom: 7px;
+
+    color: #333333;
+
+    font-size: 11px;
+
+    font-weight: 700;
+}
+
+
+.restaurant-optional-text {
+    margin-left: 5px;
+
+    color: #9a9a9a;
+
+    font-size: 9px;
+
+    font-weight: 500;
+}
+
+
+.restaurant-form-group input,
+.restaurant-form-group select,
+.restaurant-form-group textarea {
+    width: 100%;
+
+    padding: 11px 12px;
+
+    background-color: #fafafa;
+
+    border: 1px solid #d4d4d4;
+
+    border-radius: 9px;
+
+    color: #202020;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 12px;
+
+    outline: none;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease,
+        background-color 0.2s ease;
+}
+
+
+.restaurant-form-group input,
+.restaurant-form-group select {
+    height: 43px;
+}
+
+
+.restaurant-form-group textarea {
+    min-height: 105px;
+
+    resize: vertical;
+
+    line-height: 1.5;
+}
+
+
+.restaurant-form-group input:focus,
+.restaurant-form-group select:focus,
+.restaurant-form-group textarea:focus {
+    background-color: #ffffff;
+
+    border-color: #ff7a21;
+
+    box-shadow: 0 0 0 3px rgba(255, 122, 33, 0.10);
+}
+
+
+/* =========================================================
+   PRICE PREFIX
+   ========================================================= */
+
+.restaurant-input-prefix {
+    position: relative;
+}
+
+
+.restaurant-input-prefix > span {
+    position: absolute;
+
+    top: 50%;
+
+    left: 12px;
+
+    z-index: 2;
+
+    transform: translateY(-50%);
+
+    color: #777777;
+
+    font-size: 11px;
+
+    font-weight: 700;
+}
+
+
+.restaurant-input-prefix input {
+    padding-left: 38px;
+}
+
+
+/* =========================================================
+   ACTION BUTTONS
+   ========================================================= */
+
+.restaurant-food-form-actions {
+    grid-column: 1 / -1;
+
+    margin-top: 7px;
+
+    padding-top: 21px;
+
+    display: grid;
+
+    grid-template-columns: 0.7fr 1.3fr;
+
+    gap: 11px;
+
+    border-top: 1px solid #ececec;
+}
+
+
+/* =========================
+   SECONDARY
+   ========================= */
+
+.restaurant-secondary-button {
+    min-height: 45px;
+
+    padding: 0 17px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border: 2px solid #dedede;
+
+    border-radius: 9px;
+
+    color: #555555;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    text-decoration: none;
+
+    transition: 0.2s ease;
+}
+
+
+.restaurant-secondary-button:hover {
+    border-color: #202020;
+
+    background-color: #f5f5f5;
+
+    color: #202020;
+}
+
+
+/* =========================
+   PRIMARY
+   ========================= */
+
+.restaurant-primary-button {
+    min-height: 45px;
+
+    padding: 0 18px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    background-color: #202020;
+
+    border: none;
+
+    border-radius: 9px;
+
+    color: #ffffff;
+
+    font-size: 12px;
+
+    font-weight: 800;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+
+.restaurant-primary-button span {
+    color: #ff7a21;
+
+    font-size: 19px;
+}
+
+
+.restaurant-primary-button:hover {
+    background-color: #000000;
+
+    transform: translateY(-1px);
+}
+
+
+/* =========================================================
+   RESTAURANT PAGE PARTICLES
+   ========================================================= */
+
+/* =========================================================
+   ADD FOOD - PARTICLES
+   Uses the same particle system as restaurant dashboard
+   ========================================================= */
+
+.restaurant-add-food-particles {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    overflow: hidden;
+
+    pointer-events: none;
+
+    z-index: 0;
+}
+
+
+/* Turn normal gray particles white */
+
+.restaurant-add-food-particles .particle {
+    filter: brightness(0) invert(1);
+
+    opacity: 0.18;
+}
+
+
+/* White connecting lines */
+
+.restaurant-add-food-particles .particle-line {
+    background-color: rgba(255, 255, 255, 0.25);
+
+    opacity: 0.22;
+}
+
+
+/* White outlined circles */
+
+.restaurant-add-food-particles .circle-outline {
+    background-color: transparent;
+
+    border-color: rgba(255, 255, 255, 0.7);
+}
+
+
+/* White triangles */
+
+.restaurant-add-food-particles .triangle {
+    background-color: transparent;
+
+    border-left-color: transparent;
+    border-right-color: transparent;
+
+    border-bottom-color: rgba(255, 255, 255, 0.55);
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    .restaurant-add-food-page {
+        padding: 14px;
+    }
+
+
+    .restaurant-add-food-shell {
+        min-height: calc(100vh - 28px);
+
+        border-radius: 22px;
+    }
+
+
+    .restaurant-add-food-content {
+        padding: 35px 20px;
+    }
+
+
+    .restaurant-management-header {
+        flex-direction: column;
+    }
+
+
+    .restaurant-management-back {
+        width: 100%;
+
+        text-align: center;
+    }
+
+
+    .restaurant-add-food-card {
+        padding: 27px 21px;
+    }
+
+
+    .restaurant-food-form {
+        grid-template-columns: 1fr;
+    }
+
+
+    .restaurant-form-full {
+        grid-column: auto;
+    }
+
+
+    .restaurant-food-form-actions {
+        grid-column: auto;
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .restaurant-primary-button {
+        order: -1;
+    }
+}
+
+
+/* =========================================================
+   RESTAURANT MENU
+   ========================================================= */
+
+
+/* =========================
+   PAGE
+   ========================= */
+
+.restaurant-menu-page {
+    min-height: 100vh;
+
+    padding: 28px;
+
+    background-color: #f3f3f3;
+
+    color: #202020;
+}
+
+
+/* =========================
+   ORANGE SHELL
+   ========================= */
+
+.restaurant-menu-shell {
+    position: relative;
+
+    width: 100%;
+
+    min-height: calc(100vh - 56px);
+
+    background-color: #ff7a21;
+
+    border-radius: 28px;
+
+    overflow: hidden;
+}
+
+
+/* =========================
+   CONTENT
+   ========================= */
+
+.restaurant-menu-content {
+    position: relative;
+
+    z-index: 2;
+
+    width: min(1100px, 100%);
+
+    margin: 0 auto;
+
+    padding: 52px 60px 60px;
+}
+
+
+/* =========================================================
+   PARTICLES
+   Same working system as restaurant dashboard
+   ========================================================= */
+
+.restaurant-menu-particles {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    overflow: hidden;
+
+    pointer-events: none;
+
+    z-index: 0;
+}
+
+
+.restaurant-menu-particles .particle {
+    filter: brightness(0) invert(1);
+
+    opacity: 0.18;
+}
+
+
+.restaurant-menu-particles .particle-line {
+    background-color: rgba(255, 255, 255, 0.25);
+
+    opacity: 0.22;
+}
+
+
+.restaurant-menu-particles .circle-outline {
+    background-color: transparent;
+
+    border-color: rgba(255, 255, 255, 0.7);
+}
+
+
+.restaurant-menu-particles .triangle {
+    background-color: transparent;
+
+    border-left-color: transparent;
+    border-right-color: transparent;
+
+    border-bottom-color: rgba(255, 255, 255, 0.55);
+}
+
+
+/* =========================================================
+   HEADER ACTIONS
+   ========================================================= */
+
+.restaurant-menu-header-actions {
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 9px;
+}
+
+
+.restaurant-menu-add-button {
+    padding: 10px 15px;
+
+    background-color: #ffffff;
+
+    border: 1px solid #ffffff;
+
+    border-radius: 9px;
+
+    color: #202020;
+
+    font-size: 12px;
+
+    font-weight: 800;
+
+    text-decoration: none;
+
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease,
+        transform 0.2s ease;
+}
+
+
+.restaurant-menu-add-button:hover {
+    background-color: #202020;
+
+    border-color: #202020;
+
+    color: #ffffff;
+
+    transform: translateY(-1px);
+}
+
+
+/* =========================================================
+   MESSAGE
+   ========================================================= */
+
+.restaurant-menu-message {
+    margin-bottom: 18px;
+
+    padding: 12px 16px;
+
+    background-color: #ffffff;
+
+    border-radius: 9px;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    box-shadow: 0 5px 16px rgba(100, 40, 0, 0.10);
+}
+
+
+.restaurant-menu-message.success {
+    border-left: 4px solid #278a38;
+
+    color: #2c7137;
+}
+
+
+.restaurant-menu-message.error {
+    border-left: 4px solid #202020;
+
+    color: #8b3500;
+}
+
+
+/* =========================================================
+   MENU SUMMARY
+   ========================================================= */
+
+.restaurant-menu-summary {
+    margin-bottom: 15px;
+
+    padding: 18px 21px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 25px;
+
+    background-color: rgba(255, 255, 255, 0.96);
+
+    border-radius: 14px;
+
+    box-shadow: 0 6px 19px rgba(100, 40, 0, 0.10);
+}
+
+
+.restaurant-menu-summary h2 {
+    margin: 0;
+
+    font-family: "Playfair Display", Georgia, serif;
+
+    font-size: 24px;
+}
+
+
+.restaurant-menu-count {
+    flex-shrink: 0;
+
+    padding: 7px 11px;
+
+    background-color: #fff0e6;
+
+    border-radius: 30px;
+
+    color: #d75800;
+
+    font-size: 11px;
+
+    font-weight: 800;
+}
+
+
+/* =========================================================
+   SCROLLABLE LIST
+   ========================================================= */
+
+.restaurant-menu-list {
+    max-height: 610px;
+
+    padding-right: 10px;
+
+    overflow-y: auto;
+
+    scrollbar-width: thin;
+
+    scrollbar-color: #ffffff rgba(255, 255, 255, 0.2);
+}
+
+
+.restaurant-menu-list::-webkit-scrollbar {
+    width: 8px;
+}
+
+
+.restaurant-menu-list::-webkit-scrollbar-track {
+    background-color: rgba(255, 255, 255, 0.2);
+
+    border-radius: 20px;
+}
+
+
+.restaurant-menu-list::-webkit-scrollbar-thumb {
+    background-color: #ffffff;
+
+    border-radius: 20px;
+}
+
+
+/* =========================================================
+   FOOD ITEM CARD
+   ========================================================= */
+
+.restaurant-menu-item-card {
+    margin-bottom: 15px;
+
+    padding: 24px 27px;
+
+    background-color: rgba(255, 255, 255, 0.98);
+
+    border: 1px solid rgba(255, 255, 255, 0.55);
+
+    border-radius: 16px;
+
+    box-shadow: 0 8px 24px rgba(100, 40, 0, 0.12);
+}
+
+
+.restaurant-menu-item-card:last-child {
+    margin-bottom: 0;
+}
+
+
+/* =========================================================
+   ITEM TOP
+   ========================================================= */
+
+.restaurant-menu-item-top {
+    margin-bottom: 18px;
+
+    padding-bottom: 15px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: flex-start;
+
+    gap: 20px;
+
+    border-bottom: 1px solid #ececec;
+}
+
+
+.restaurant-menu-item-id {
+    margin: 0 0 4px;
+
+    color: #e85c00;
+
+    font-size: 9px;
+
+    font-weight: 800;
+
+    letter-spacing: 1.3px;
+}
+
+
+.restaurant-menu-item-top h3 {
+    margin: 0;
+
+    font-family: "Playfair Display", Georgia, serif;
+
+    font-size: 25px;
+}
+
+
+/* =========================
+   AVAILABILITY BADGE
+   ========================= */
+
+.restaurant-menu-availability {
+    flex-shrink: 0;
+
+    padding: 7px 11px;
+
+    border-radius: 30px;
+
+    font-size: 10px;
+
+    font-weight: 800;
+}
+
+
+.restaurant-menu-availability.available {
+    background-color: #edf8ef;
+
+    color: #327940;
+}
+
+
+.restaurant-menu-availability.unavailable {
+    background-color: #eeeeee;
+
+    color: #707070;
+}
+
+
+/* =========================================================
+   ITEM FORM GRID
+   ========================================================= */
+
+.restaurant-menu-item-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 16px;
+}
+
+
+.restaurant-menu-full {
+    grid-column: 1 / -1;
+}
+
+
+/* Slightly shorter description than Add Food */
+
+.restaurant-menu-item-grid textarea {
+    min-height: 82px;
+}
+
+
+/* =========================================================
+   ITEM BOTTOM
+   ========================================================= */
+
+.restaurant-menu-item-bottom {
+    margin-top: 19px;
+
+    padding-top: 17px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 25px;
+
+    border-top: 1px solid #ececec;
+}
+
+
+/* =========================
+   PRICE PREVIEW
+   ========================= */
+
+.restaurant-menu-price-preview {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 3px;
+}
+
+
+.restaurant-menu-price-preview span {
+    color: #888888;
+
+    font-size: 10px;
+}
+
+
+.restaurant-menu-price-preview strong {
+    font-family: "Playfair Display", Georgia, serif;
+
+    font-size: 21px;
+}
+
+
+/* =========================
+   SAVE BUTTON
+   ========================= */
+
+.restaurant-menu-save-button {
+    min-width: 175px;
+
+    min-height: 43px;
+
+    padding: 0 16px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    background-color: #202020;
+
+    border: none;
+
+    border-radius: 9px;
+
+    color: #ffffff;
+
+    font-size: 12px;
+
+    font-weight: 800;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+
+.restaurant-menu-save-button span {
+    width: 21px;
+
+    height: 21px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background-color: #ff7a21;
+
+    border-radius: 50%;
+
+    font-size: 11px;
+}
+
+
+.restaurant-menu-save-button:hover {
+    background-color: #000000;
+
+    transform: translateY(-1px);
+}
+
+
+/* =========================================================
+   EMPTY STATE
+   ========================================================= */
+
+.restaurant-menu-empty {
+    margin: 60px auto;
+
+    max-width: 610px;
+
+    padding: 48px 30px;
+
+    background-color: rgba(255, 255, 255, 0.97);
+
+    border: 1px dashed rgba(255, 255, 255, 0.8);
+
+    border-radius: 15px;
+
+    text-align: center;
+
+    box-shadow: 0 8px 24px rgba(100, 40, 0, 0.10);
+}
+
+
+.restaurant-menu-empty h2 {
+    margin: 0 0 9px;
+
+    font-family: "Playfair Display", Georgia, serif;
+
+    font-size: 28px;
+}
+
+
+.restaurant-menu-empty > p:not(.restaurant-card-label) {
+    margin: 0 0 19px;
+
+    color: #777777;
+
+    font-size: 13px;
+}
+
+
+.restaurant-menu-empty a {
+    display: inline-block;
+
+    padding: 10px 16px;
+
+    background-color: #202020;
+
+    border-radius: 9px;
+
+    color: #ffffff;
+
+    font-size: 12px;
+
+    font-weight: 800;
+
+    text-decoration: none;
+}
+
+
+.restaurant-menu-empty a:hover {
+    background-color: #000000;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 750px) {
+
+    .restaurant-menu-page {
+        padding: 14px;
+    }
+
+
+    .restaurant-menu-shell {
+        min-height: calc(100vh - 28px);
+
+        border-radius: 22px;
+    }
+
+
+    .restaurant-menu-content {
+        padding: 35px 20px;
+    }
+
+
+    .restaurant-menu-header-actions {
+        width: 100%;
+
+        flex-direction: column;
+    }
+
+
+    .restaurant-menu-add-button,
+    .restaurant-menu-header-actions
+    .restaurant-management-back {
+        width: 100%;
+
+        text-align: center;
+    }
+
+
+    .restaurant-menu-summary {
+        align-items: flex-start;
+
+        flex-direction: column;
+    }
+
+
+    .restaurant-menu-item-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .restaurant-menu-full {
+        grid-column: auto;
+    }
+
+
+    .restaurant-menu-item-bottom {
+        flex-direction: column;
+
+        align-items: stretch;
+    }
+
+
+    .restaurant-menu-save-button {
+        width: 100%;
+    }
+
+
+    .restaurant-menu-list {
+        max-height: none;
+
+        overflow: visible;
+    }
+}
+
+/* =========================================================
+   RESTAURANT COUPONS
+   ========================================================= */
+
+
+/* =========================
+   ADD COUPON PAGE
+   ========================= */
+
+.restaurant-coupon-page,
+.restaurant-coupon-list-page {
+    min-height: 100vh;
+
+    padding: 28px;
+
+    background-color: #f3f3f3;
+
+    color: #202020;
+}
+
+
+.restaurant-coupon-shell,
+.restaurant-coupon-list-shell {
+    position: relative;
+
+    width: 100%;
+
+    min-height: calc(100vh - 56px);
+
+    background-color: #ff7a21;
+
+    border-radius: 28px;
+
+    overflow: hidden;
+}
+
+
+.restaurant-coupon-content {
+    position: relative;
+
+    z-index: 2;
+
+    width: min(950px, 100%);
+
+    margin: 0 auto;
+
+    padding: 52px 60px 60px;
+}
+
+
+.restaurant-coupon-list-content {
+    position: relative;
+
+    z-index: 2;
+
+    width: min(1050px, 100%);
+
+    margin: 0 auto;
+
+    padding: 52px 60px 60px;
+}
+
+
+/* =========================================================
+   PARTICLES
+   ========================================================= */
+
+.restaurant-coupon-particles,
+.restaurant-coupon-list-particles {
+    position: absolute;
+
+    inset: 0;
+
+    overflow: hidden;
+
+    pointer-events: none;
+
+    z-index: 0;
+}
+
+
+.restaurant-coupon-particles .particle,
+.restaurant-coupon-list-particles .particle {
+    filter: brightness(0) invert(1);
+
+    opacity: 0.18;
+}
+
+
+.restaurant-coupon-particles .particle-line,
+.restaurant-coupon-list-particles .particle-line {
+    background-color: rgba(255, 255, 255, 0.25);
+
+    opacity: 0.22;
+}
+
+
+.restaurant-coupon-particles .circle-outline,
+.restaurant-coupon-list-particles .circle-outline {
+    background-color: transparent;
+
+    border-color: rgba(255, 255, 255, 0.7);
+}
+
+
+.restaurant-coupon-particles .triangle,
+.restaurant-coupon-list-particles .triangle {
+    background-color: transparent;
+
+    border-left-color: transparent;
+    border-right-color: transparent;
+
+    border-bottom-color: rgba(255, 255, 255, 0.55);
+}
+
+
+/* =========================================================
+   HEADER ACTIONS
+   ========================================================= */
+
+.restaurant-coupon-header-actions {
+    flex-shrink: 0;
+
+    display: flex;
+
+    gap: 9px;
+
+    align-items: center;
+}
+
+
+.restaurant-coupon-view-button {
+    padding: 10px 15px;
+
+    background-color: #ffffff;
+
+    border: 1px solid #ffffff;
+
+    border-radius: 9px;
+
+    color: #202020;
+
+    font-size: 12px;
+
+    font-weight: 800;
+
+    text-decoration: none;
+
+    transition: 0.2s ease;
+}
+
+
+.restaurant-coupon-view-button:hover {
+    background-color: #202020;
+
+    border-color: #202020;
+
+    color: #ffffff;
+
+    transform: translateY(-1px);
+}
+
+
+/* =========================================================
+   ADD COUPON CARD
+   ========================================================= */
+
+.restaurant-coupon-form-card {
+    max-width: 720px;
+
+    margin: 0 auto;
+
+    padding: 33px 38px;
+
+    background-color: rgba(255, 255, 255, 0.98);
+
+    border-radius: 18px;
+
+    box-shadow: 0 12px 35px rgba(100, 40, 0, 0.16);
+}
+
+
+.restaurant-coupon-card-top {
+    margin-bottom: 25px;
+
+    padding-bottom: 20px;
+
+    border-bottom: 1px solid #ececec;
+}
+
+
+.restaurant-coupon-card-top h2 {
+    margin: 0;
+
+    font-family: "Playfair Display", Georgia, serif;
+
+    font-size: 30px;
+}
+
+
+.restaurant-coupon-card-top > p:last-child {
+    margin: 7px 0 0;
+
+    color: #808080;
+
+    font-size: 12px;
+}
+
+
+/* =========================================================
+   COUPON FORM
+   ========================================================= */
+
+.restaurant-coupon-form {
+    display: grid;
+
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 20px;
+}
+
+
+.restaurant-field-hint {
+    display: block;
+
+    margin-top: 6px;
+
+    color: #969696;
+
+    font-size: 10px;
+
+    line-height: 1.4;
+}
+
+
+/* =========================
+   PERCENT INPUT
+   ========================= */
+
+.restaurant-percent-input {
+    position: relative;
+}
+
+
+.restaurant-percent-input input {
+    padding-right: 38px;
+}
+
+
+.restaurant-percent-input > span {
+    position: absolute;
+
+    top: 50%;
+
+    right: 14px;
+
+    transform: translateY(-50%);
+
+    color: #e85c00;
+
+    font-size: 14px;
+
+    font-weight: 800;
+}
+
+
+/* =========================================================
+   OFFER PREVIEW
+   ========================================================= */
+
+.restaurant-coupon-preview {
+    grid-column: 1 / -1;
+
+    padding: 17px 18px;
+
+    background-color: #fff3ea;
+
+    border-left: 4px solid #ff7a21;
+
+    border-radius: 9px;
+}
+
+
+.restaurant-coupon-preview > span {
+    display: block;
+
+    margin-bottom: 5px;
+
+    color: #e85c00;
+
+    font-size: 9px;
+
+    font-weight: 800;
+
+    letter-spacing: 1.3px;
+}
+
+
+.restaurant-coupon-preview strong {
+    display: block;
+
+    margin-bottom: 4px;
+
+    font-family: "Playfair Display", Georgia, serif;
+
+    font-size: 18px;
+}
+
+
+.restaurant-coupon-preview p {
+    margin: 0;
+
+    color: #777777;
+
+    font-size: 11px;
+
+    line-height: 1.5;
+}
+
+
+/* =========================================================
+   COUPON FORM ACTIONS
+   ========================================================= */
+
+.restaurant-coupon-form-actions {
+    grid-column: 1 / -1;
+
+    padding-top: 20px;
+
+    display: grid;
+
+    grid-template-columns: 0.7fr 1.3fr;
+
+    gap: 11px;
+
+    border-top: 1px solid #ececec;
+}
+
+
+/* =========================================================
+   VIEW COUPONS SUMMARY
+   ========================================================= */
+
+.restaurant-coupon-list-summary {
+    margin-bottom: 15px;
+
+    padding: 18px 22px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    background-color: rgba(255, 255, 255, 0.97);
+
+    border-radius: 14px;
+
+    box-shadow: 0 6px 20px rgba(100, 40, 0, 0.10);
+}
+
+
+.restaurant-coupon-list-summary h2 {
+    margin: 0;
+
+    font-family: "Playfair Display", Georgia, serif;
+
+    font-size: 24px;
+}
+
+
+.restaurant-coupon-list-summary > span {
+    padding: 7px 11px;
+
+    background-color: #fff0e6;
+
+    border-radius: 30px;
+
+    color: #d75800;
+
+    font-size: 11px;
+
+    font-weight: 800;
+}
+
+
+/* =========================================================
+   SCROLLABLE COUPON LIST
+   ========================================================= */
+
+.restaurant-coupon-scroll-area {
+    max-height: 600px;
+
+    padding-right: 10px;
+
+    overflow-y: auto;
+
+    scrollbar-width: thin;
+
+    scrollbar-color: #ffffff rgba(255, 255, 255, 0.2);
+}
+
+
+.restaurant-coupon-scroll-area::-webkit-scrollbar {
+    width: 8px;
+}
+
+
+.restaurant-coupon-scroll-area::-webkit-scrollbar-track {
+    background-color: rgba(255, 255, 255, 0.2);
+
+    border-radius: 20px;
+}
+
+
+.restaurant-coupon-scroll-area::-webkit-scrollbar-thumb {
+    background-color: #ffffff;
+
+    border-radius: 20px;
+}
+
+
+/* =========================================================
+   COUPON CARD
+   ========================================================= */
+
+.restaurant-coupon-card {
+    margin-bottom: 13px;
+
+    padding: 23px 26px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 25px;
+
+    background-color: rgba(255, 255, 255, 0.98);
+
+    border-radius: 14px;
+
+    box-shadow: 0 7px 22px rgba(100, 40, 0, 0.12);
+}
+
+
+.restaurant-coupon-card:last-child {
+    margin-bottom: 0;
+}
+
+
+.restaurant-coupon-card-left > p {
+    margin: 0 0 4px;
+
+    color: #e85c00;
+
+    font-size: 9px;
+
+    font-weight: 800;
+
+    letter-spacing: 1.3px;
+}
+
+
+.restaurant-coupon-card-left h2 {
+    margin: 0;
+
+    font-family: "Playfair Display", Georgia, serif;
+
+    font-size: 26px;
+
+    letter-spacing: 0.5px;
+}
+
+
+.restaurant-coupon-card-left > span {
+    display: block;
+
+    margin-top: 6px;
+
+    color: #999999;
+
+    font-size: 10px;
+}
+
+
+/* =========================
+   DISCOUNT AREA
+   ========================= */
+
+.restaurant-coupon-discount {
+    min-width: 105px;
+
+    padding: 10px 14px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    background-color: #fff0e6;
+
+    border: 1px dashed #ff9c5b;
+
+    border-radius: 11px;
+}
+
+
+.restaurant-coupon-discount > span {
+    color: #d75a07;
+
+    font-size: 8px;
+
+    font-weight: 800;
+
+    letter-spacing: 1px;
+}
+
+
+.restaurant-coupon-discount strong {
+    margin: 1px 0;
+
+    font-family: "Playfair Display", Georgia, serif;
+
+    color: #202020;
+
+    font-size: 29px;
+}
+
+
+.restaurant-coupon-discount small {
+    color: #777777;
+
+    font-size: 9px;
+}
+
+
+/* =========================================================
+   EMPTY STATE
+   ========================================================= */
+
+.restaurant-coupon-empty {
+    max-width: 600px;
+
+    margin: 65px auto;
+
+    padding: 48px 30px;
+
+    background-color: rgba(255, 255, 255, 0.98);
+
+    border-radius: 15px;
+
+    text-align: center;
+
+    box-shadow: 0 8px 24px rgba(100, 40, 0, 0.11);
+}
+
+
+.restaurant-coupon-empty h2 {
+    margin: 0 0 9px;
+
+    font-family: "Playfair Display", Georgia, serif;
+
+    font-size: 28px;
+}
+
+
+.restaurant-coupon-empty > p:not(.restaurant-card-label) {
+    margin: 0 0 19px;
+
+    color: #777777;
+
+    font-size: 13px;
+}
+
+
+.restaurant-coupon-empty a {
+    display: inline-block;
+
+    padding: 10px 16px;
+
+    background-color: #202020;
+
+    border-radius: 9px;
+
+    color: #ffffff;
+
+    font-size: 12px;
+
+    font-weight: 800;
+
+    text-decoration: none;
+}
+
+
+.restaurant-coupon-empty a:hover {
+    background-color: #000000;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    .restaurant-coupon-page,
+    .restaurant-coupon-list-page {
+        padding: 14px;
+    }
+
+
+    .restaurant-coupon-shell,
+    .restaurant-coupon-list-shell {
+        min-height: calc(100vh - 28px);
+
+        border-radius: 22px;
+    }
+
+
+    .restaurant-coupon-content,
+    .restaurant-coupon-list-content {
+        padding: 35px 20px;
+    }
+
+
+    .restaurant-coupon-header-actions {
+        width: 100%;
+
+        flex-direction: column;
+    }
+
+
+    .restaurant-coupon-view-button,
+    .restaurant-coupon-header-actions
+    .restaurant-management-back {
+        width: 100%;
+
+        text-align: center;
+    }
+
+
+    .restaurant-coupon-form-card {
+        padding: 27px 21px;
+    }
+
+
+    .restaurant-coupon-form {
+        grid-template-columns: 1fr;
+    }
+
+
+    .restaurant-coupon-preview,
+    .restaurant-coupon-form-actions {
+        grid-column: auto;
+    }
+
+
+    .restaurant-coupon-form-actions {
+        grid-template-columns: 1fr;
+    }
+
+
+    .restaurant-coupon-form-actions
+    .restaurant-primary-button {
+        order: -1;
+    }
+
+
+    .restaurant-coupon-list-summary {
+        align-items: flex-start;
+
+        flex-direction: column;
+    }
+
+
+    .restaurant-coupon-card {
+        align-items: flex-start;
+
+        flex-direction: column;
+    }
+
+
+    .restaurant-coupon-discount {
+        width: 100%;
+    }
+
+
+    .restaurant-coupon-scroll-area {
+        max-height: none;
+
+        overflow: visible;
+    }
+}
+
+/* =========================================================
+   RESTAURANT ORDERS
+   ========================================================= */
+
+
+/* =========================
+   PAGE
+   ========================= */
+
+.restaurant-orders-page {
+    min-height: 100vh;
+
+    padding: 28px;
+
+    background-color: #f3f3f3;
+
+    color: #202020;
+}
+
+
+.restaurant-orders-shell {
+    position: relative;
+
+    width: 100%;
+
+    min-height: calc(100vh - 56px);
+
+    background-color: #ff7a21;
+
+    border-radius: 28px;
+
+    overflow: hidden;
+}
+
+
+.restaurant-orders-content {
+    position: relative;
+
+    z-index: 2;
+
+    width: min(1050px, 100%);
+
+    margin: 0 auto;
+
+    padding: 52px 60px 60px;
+}
+
+
+/* =========================================================
+   PARTICLES
+   ========================================================= */
+
+.restaurant-orders-particles {
+    position: absolute;
+
+    inset: 0;
+
+    overflow: hidden;
+
+    pointer-events: none;
+
+    z-index: 0;
+}
+
+
+.restaurant-orders-particles .particle {
+    filter: brightness(0) invert(1);
+
+    opacity: 0.18;
+}
+
+
+.restaurant-orders-particles .particle-line {
+    background-color: rgba(255, 255, 255, 0.25);
+
+    opacity: 0.22;
+}
+
+
+.restaurant-orders-particles .circle-outline {
+    background-color: transparent;
+
+    border-color: rgba(255, 255, 255, 0.7);
+}
+
+
+.restaurant-orders-particles .triangle {
+    background-color: transparent;
+
+    border-left-color: transparent;
+    border-right-color: transparent;
+
+    border-bottom-color: rgba(255, 255, 255, 0.55);
+}
+
+
+/* =========================================================
+   SUMMARY
+   ========================================================= */
+
+.restaurant-orders-summary {
+    margin-bottom: 15px;
+
+    padding: 18px 22px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    background-color: rgba(255, 255, 255, 0.97);
+
+    border-radius: 14px;
+
+    box-shadow: 0 6px 20px rgba(100, 40, 0, 0.10);
+}
+
+
+.restaurant-orders-summary h2 {
+    margin: 0;
+
+    font-family: "Playfair Display", Georgia, serif;
+
+    font-size: 24px;
+}
+
+
+.restaurant-orders-summary > span {
+    padding: 7px 11px;
+
+    background-color: #fff0e6;
+
+    border-radius: 30px;
+
+    color: #d75800;
+
+    font-size: 11px;
+
+    font-weight: 800;
+}
+
+
+/* =========================================================
+   SCROLLABLE ORDER LIST
+   ========================================================= */
+
+.restaurant-orders-list {
+    max-height: 620px;
+
+    padding-right: 10px;
+
+    overflow-y: auto;
+
+    scrollbar-width: thin;
+
+    scrollbar-color: #ffffff rgba(255, 255, 255, 0.2);
+}
+
+
+.restaurant-orders-list::-webkit-scrollbar {
+    width: 8px;
+}
+
+
+.restaurant-orders-list::-webkit-scrollbar-track {
+    background-color: rgba(255, 255, 255, 0.2);
+
+    border-radius: 20px;
+}
+
+
+.restaurant-orders-list::-webkit-scrollbar-thumb {
+    background-color: #ffffff;
+
+    border-radius: 20px;
+}
+
+
+/* =========================================================
+   ORDER CARD
+   ========================================================= */
+
+.restaurant-order-card {
+    margin-bottom: 15px;
+
+    padding: 25px 27px;
+
+    background-color: rgba(255, 255, 255, 0.98);
+
+    border-radius: 16px;
+
+    box-shadow: 0 8px 24px rgba(100, 40, 0, 0.12);
+}
+
+
+.restaurant-order-card:last-child {
+    margin-bottom: 0;
+}
+
+
+/* =========================
+   ORDER TOP
+   ========================= */
+
+.restaurant-order-top {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: flex-start;
+
+    gap: 20px;
+}
+
+
+.restaurant-order-number {
+    margin: 0 0 4px;
+
+    color: #e85c00;
+
+    font-size: 9px;
+
+    font-weight: 800;
+
+    letter-spacing: 1.3px;
+}
+
+
+.restaurant-order-top h2 {
+    margin: 0;
+
+    font-family: "Playfair Display", Georgia, serif;
+
+    font-size: 25px;
+}
+
+
+.restaurant-order-date {
+    margin: 6px 0 0;
+
+    color: #888888;
+
+    font-size: 11px;
+}
+
+
+/* =========================
+   STATUS BADGE
+   ========================= */
+
+.restaurant-order-status {
+    flex-shrink: 0;
+
+    padding: 7px 12px;
+
+    border-radius: 30px;
+
+    font-size: 10px;
+
+    font-weight: 800;
+}
+
+
+.restaurant-order-status.pending {
+    background-color: #fff0e6;
+
+    color: #d75800;
+}
+
+
+.restaurant-order-status.delivering {
+    background-color: #f0f0f0;
+
+    color: #202020;
+}
+
+
+/* =========================================================
+   PROGRESS TRACKER
+   ========================================================= */
+
+.restaurant-order-progress {
+    margin: 22px 0;
+
+    display: flex;
+
+    align-items: center;
+}
+
+
+.restaurant-order-step {
+    min-width: 70px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 5px;
+
+    color: #a0a0a0;
+}
+
+
+.restaurant-order-step > span {
+    width: 25px;
+
+    height: 25px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background-color: #ececec;
+
+    border-radius: 50%;
+
+    color: #8a8a8a;
+
+    font-size: 10px;
+
+    font-weight: 800;
+}
+
+
+.restaurant-order-step small {
+    font-size: 9px;
+
+    font-weight: 700;
+}
+
+
+.restaurant-order-step.active {
+    color: #d75800;
+}
+
+
+.restaurant-order-step.active > span {
+    background-color: #ff7a21;
+
+    color: #ffffff;
+}
+
+
+.restaurant-order-progress-line {
+    flex: 1;
+
+    height: 2px;
+
+    background-color: #ececec;
+}
+
+
+.restaurant-order-progress-line.active {
+    background-color: #ff7a21;
+}
+
+
+/* =========================================================
+   ITEMS
+   ========================================================= */
+
+.restaurant-order-items {
+    padding: 17px 0;
+
+    border-top: 1px dashed #d8d8d8;
+
+    border-bottom: 1px dashed #d8d8d8;
+}
+
+
+.restaurant-order-section-label {
+    margin: 0 0 10px;
+
+    color: #e85c00;
+
+    font-size: 9px;
+
+    font-weight: 800;
+
+    letter-spacing: 1.2px;
+}
+
+
+.restaurant-order-item-row {
+    padding: 6px 0;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    font-size: 12px;
+}
+
+
+.restaurant-order-item-row > div {
+    display: flex;
+
+    gap: 8px;
+}
+
+
+.restaurant-order-item-row span {
+    color: #888888;
+}
+
+
+/* =========================================================
+   BOTTOM
+   ========================================================= */
+
+.restaurant-order-bottom {
+    margin-top: 18px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 25px;
+}
+
+
+.restaurant-order-total {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 3px;
+}
+
+
+.restaurant-order-total span {
+    color: #888888;
+
+    font-size: 10px;
+}
+
+
+.restaurant-order-total strong {
+    font-family: "Playfair Display", Georgia, serif;
+
+    font-size: 23px;
+}
+
+
+/* =========================================================
+   ACTIONS
+   ========================================================= */
+
+.restaurant-order-actions {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: flex-end;
+
+    gap: 9px;
+}
+
+
+.restaurant-order-cancel-button,
+.restaurant-order-deliver-button {
+    min-height: 41px;
+
+    padding: 0 15px;
+
+    border-radius: 9px;
+
+    font-size: 11px;
+
+    font-weight: 800;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+
+.restaurant-order-cancel-button {
+    background-color: #ffffff;
+
+    border: 1px solid #d6d6d6;
+
+    color: #777777;
+}
+
+
+.restaurant-order-cancel-button:hover {
+    border-color: #202020;
+
+    color: #202020;
+}
+
+
+.restaurant-order-deliver-button {
+    min-width: 150px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 18px;
+
+    background-color: #202020;
+
+    border: 1px solid #202020;
+
+    color: #ffffff;
+}
+
+
+.restaurant-order-deliver-button span {
+    color: #ff7a21;
+
+    font-size: 15px;
+}
+
+
+.restaurant-order-deliver-button:hover {
+    background-color: #000000;
+
+    transform: translateY(-1px);
+}
+
+
+/* =========================
+   DELIVERING MESSAGE
+   ========================= */
+
+.restaurant-order-waiting {
+    padding: 10px 13px;
+
+    background-color: #fff0e6;
+
+    border-radius: 8px;
+
+    color: #d75800;
+
+    font-size: 10px;
+
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   EMPTY STATE
+   ========================================================= */
+
+.restaurant-orders-empty {
+    max-width: 600px;
+
+    margin: 65px auto;
+
+    padding: 48px 30px;
+
+    background-color: rgba(255, 255, 255, 0.98);
+
+    border-radius: 15px;
+
+    text-align: center;
+
+    box-shadow: 0 8px 24px rgba(100, 40, 0, 0.11);
+}
+
+
+.restaurant-orders-empty h2 {
+    margin: 0 0 9px;
+
+    font-family: "Playfair Display", Georgia, serif;
+
+    font-size: 28px;
+}
+
+
+.restaurant-orders-empty > p:not(.restaurant-card-label) {
+    margin: 0 0 19px;
+
+    color: #777777;
+
+    font-size: 13px;
+}
+
+
+.restaurant-orders-empty a {
+    display: inline-block;
+
+    padding: 10px 16px;
+
+    background-color: #202020;
+
+    border-radius: 9px;
+
+    color: #ffffff;
+
+    font-size: 12px;
+
+    font-weight: 800;
+
+    text-decoration: none;
+}
+
+
+.restaurant-orders-empty a:hover {
+    background-color: #000000;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 750px) {
+
+    .restaurant-orders-page {
+        padding: 14px;
+    }
+
+
+    .restaurant-orders-shell {
+        min-height: calc(100vh - 28px);
+
+        border-radius: 22px;
+    }
+
+
+    .restaurant-orders-content {
+        padding: 35px 20px;
+    }
+
+
+    .restaurant-orders-summary {
+        align-items: flex-start;
+
+        flex-direction: column;
+    }
+
+
+    .restaurant-order-bottom {
+        align-items: stretch;
+
+        flex-direction: column;
+    }
+
+
+    .restaurant-order-actions {
+        align-items: stretch;
+
+        flex-direction: column;
+    }
+
+
+    .restaurant-order-cancel-button,
+    .restaurant-order-deliver-button {
+        width: 100%;
+    }
+
+
+    .restaurant-order-waiting {
+        text-align: center;
+    }
+
+
+    .restaurant-order-progress {
+        overflow-x: auto;
+    }
+
+
+    .restaurant-orders-list {
+        max-height: none;
+
+        overflow: visible;
+    }
+}
+
+/* =========================================================
+   RESTAURANT REVIEWS
+   ========================================================= */
+
+
+/* =========================
+   PAGE
+   ========================= */
+
+.restaurant-reviews-page {
+    min-height: 100vh;
+
+    padding: 28px;
+
+    background-color: #f3f3f3;
+
+    color: #202020;
+}
+
+
+.restaurant-reviews-shell {
+    position: relative;
+
+    width: 100%;
+
+    min-height: calc(100vh - 56px);
+
+    background-color: #ff7a21;
+
+    border-radius: 28px;
+
+    overflow: hidden;
+}
+
+
+.restaurant-reviews-content {
+    position: relative;
+
+    z-index: 2;
+
+    width: min(1050px, 100%);
+
+    margin: 0 auto;
+
+    padding: 52px 60px 60px;
+}
+
+
+/* =========================================================
+   PARTICLES
+   ========================================================= */
+
+.restaurant-reviews-particles {
+    position: absolute;
+
+    inset: 0;
+
+    overflow: hidden;
+
+    pointer-events: none;
+
+    z-index: 0;
+}
+
+
+.restaurant-reviews-particles .particle {
+    filter: brightness(0) invert(1);
+
+    opacity: 0.18;
+}
+
+
+.restaurant-reviews-particles .particle-line {
+    background-color: rgba(255, 255, 255, 0.25);
+
+    opacity: 0.22;
+}
+
+
+.restaurant-reviews-particles .circle-outline {
+    background-color: transparent;
+
+    border-color: rgba(255, 255, 255, 0.7);
+}
+
+
+.restaurant-reviews-particles .triangle {
+    background-color: transparent;
+
+    border-left-color: transparent;
+    border-right-color: transparent;
+
+    border-bottom-color: rgba(255, 255, 255, 0.55);
+}
+
+
+/* =========================================================
+   RATING SUMMARY
+   ========================================================= */
+
+.restaurant-rating-summary {
+    margin-bottom: 15px;
+
+    padding: 24px 27px;
+
+    display: grid;
+
+    grid-template-columns: 1fr auto;
+
+    gap: 30px;
+
+    align-items: center;
+
+    background-color: rgba(255, 255, 255, 0.98);
+
+    border-radius: 16px;
+
+    box-shadow: 0 8px 24px rgba(100, 40, 0, 0.12);
+}
+
+
+.restaurant-average-rating {
+    display: flex;
+
+    align-items: baseline;
+
+    gap: 6px;
+}
+
+
+.restaurant-average-rating strong {
+    font-family: "Playfair Display", Georgia, serif;
+
+    font-size: 48px;
+
+    line-height: 1;
+}
+
+
+.restaurant-average-rating span {
+    color: #888888;
+
+    font-size: 15px;
+
+    font-weight: 700;
+}
+
+
+.restaurant-summary-stars {
+    margin-top: 8px;
+
+    display: flex;
+
+    gap: 3px;
+}
+
+
+.restaurant-summary-stars span,
+.restaurant-review-stars span {
+    color: #d8d8d8;
+
+    font-size: 19px;
+}
+
+
+.restaurant-summary-stars span.filled,
+.restaurant-review-stars span.filled {
+    color: #ff7a21;
+}
+
+
+.restaurant-rating-summary-left h2 {
+    margin: 0 0 5px;
+
+    font-family: "Playfair Display", Georgia, serif;
+
+    font-size: 27px;
+}
+
+
+.restaurant-rating-summary-left > p:last-child {
+    margin: 0;
+
+    color: #858585;
+
+    font-size: 12px;
+}
+
+
+/* =========================
+   TOTAL RATINGS
+   ========================= */
+
+.restaurant-rating-count-card {
+    min-width: 145px;
+
+    padding: 18px 22px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    background-color: #fff0e6;
+
+    border: 1px dashed #ff9c5b;
+
+    border-radius: 13px;
+}
+
+
+.restaurant-rating-count-card > span {
+    color: #d75800;
+
+    font-size: 8px;
+
+    font-weight: 800;
+
+    letter-spacing: 1px;
+}
+
+
+.restaurant-rating-count-card strong {
+    margin: 3px 0;
+
+    font-family: "Playfair Display", Georgia, serif;
+
+    font-size: 35px;
+}
+
+
+.restaurant-rating-count-card small {
+    color: #777777;
+
+    font-size: 9px;
+}
+
+
+/* =========================================================
+   LIST HEADING
+   ========================================================= */
+
+.restaurant-review-list-heading {
+    margin-bottom: 15px;
+
+    padding: 18px 22px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    background-color: rgba(255, 255, 255, 0.97);
+
+    border-radius: 14px;
+
+    box-shadow: 0 6px 20px rgba(100, 40, 0, 0.10);
+}
+
+
+.restaurant-review-list-heading h2 {
+    margin: 0;
+
+    font-family: "Playfair Display", Georgia, serif;
+
+    font-size: 24px;
+}
+
+
+.restaurant-review-list-heading > span {
+    padding: 7px 11px;
+
+    background-color: #fff0e6;
+
+    border-radius: 30px;
+
+    color: #d75800;
+
+    font-size: 11px;
+
+    font-weight: 800;
+}
+
+
+/* =========================================================
+   SCROLLABLE LIST
+   ========================================================= */
+
+.restaurant-review-list {
+    max-height: 600px;
+
+    padding-right: 10px;
+
+    overflow-y: auto;
+
+    scrollbar-width: thin;
+
+    scrollbar-color: #ffffff rgba(255, 255, 255, 0.2);
+}
+
+
+.restaurant-review-list::-webkit-scrollbar {
+    width: 8px;
+}
+
+
+.restaurant-review-list::-webkit-scrollbar-track {
+    background-color: rgba(255, 255, 255, 0.2);
+
+    border-radius: 20px;
+}
+
+
+.restaurant-review-list::-webkit-scrollbar-thumb {
+    background-color: #ffffff;
+
+    border-radius: 20px;
+}
+
+
+/* =========================================================
+   REVIEW CARD
+   ========================================================= */
+
+.restaurant-review-card {
+    margin-bottom: 14px;
+
+    padding: 23px 26px;
+
+    background-color: rgba(255, 255, 255, 0.98);
+
+    border-radius: 15px;
+
+    box-shadow: 0 7px 22px rgba(100, 40, 0, 0.12);
+}
+
+
+.restaurant-review-card:last-child {
+    margin-bottom: 0;
+}
+
+
+/* =========================
+   REVIEW TOP
+   ========================= */
+
+.restaurant-review-top {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: flex-start;
+
+    gap: 20px;
+}
+
+
+.restaurant-review-customer {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+}
+
+
+/* =========================
+   INITIAL AVATAR
+   ========================= */
+
+.restaurant-review-avatar {
+    width: 40px;
+
+    height: 40px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background-color: #ff7a21;
+
+    border-radius: 50%;
+
+    color: #ffffff;
+
+    font-family: "Playfair Display", Georgia, serif;
+
+    font-size: 18px;
+
+    font-weight: 800;
+}
+
+
+.restaurant-review-customer h3 {
+    margin: 0;
+
+    font-family: "Playfair Display", Georgia, serif;
+
+    font-size: 20px;
+}
+
+
+.restaurant-review-customer p {
+    margin: 3px 0 0;
+
+    color: #8d8d8d;
+
+    font-size: 10px;
+}
+
+
+.restaurant-review-date {
+    color: #8b8b8b;
+
+    font-size: 10px;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   REVIEW RATING
+   ========================================================= */
+
+.restaurant-review-rating-row {
+    margin: 17px 0;
+
+    padding: 10px 0;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    border-top: 1px solid #eeeeee;
+
+    border-bottom: 1px solid #eeeeee;
+}
+
+
+.restaurant-review-stars {
+    display: flex;
+
+    gap: 2px;
+}
+
+
+.restaurant-review-rating-row > strong {
+    font-size: 11px;
+}
+
+
+.restaurant-no-rating {
+    padding: 6px 9px;
+
+    background-color: #eeeeee;
+
+    border-radius: 20px;
+
+    color: #777777;
+
+    font-size: 10px;
+
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   COMMENT
+   ========================================================= */
+
+.restaurant-review-comment {
+    padding: 2px 0 5px;
+}
+
+
+.restaurant-review-section-label {
+    margin: 0 0 8px;
+
+    color: #e85c00;
+
+    font-size: 9px;
+
+    font-weight: 800;
+
+    letter-spacing: 1.2px;
+}
+
+
+.restaurant-review-comment > p:not(.restaurant-review-section-label) {
+    margin: 0;
+
+    color: #484848;
+
+    font-size: 12px;
+
+    line-height: 1.65;
+}
+
+
+.restaurant-review-comment
+.restaurant-empty-comment {
+    color: #999999 !important;
+
+    font-style: italic;
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.restaurant-review-footer {
+    margin-top: 17px;
+
+    padding-top: 11px;
+
+    border-top: 1px dashed #dddddd;
+
+    color: #a0a0a0;
+
+    font-size: 9px;
+
+    text-align: right;
+}
+
+
+/* =========================================================
+   EMPTY STATE
+   ========================================================= */
+
+.restaurant-reviews-empty {
+    max-width: 600px;
+
+    margin: 65px auto;
+
+    padding: 48px 30px;
+
+    background-color: rgba(255, 255, 255, 0.98);
+
+    border-radius: 15px;
+
+    text-align: center;
+
+    box-shadow: 0 8px 24px rgba(100, 40, 0, 0.11);
+}
+
+
+.restaurant-reviews-empty h2 {
+    margin: 0 0 9px;
+
+    font-family: "Playfair Display", Georgia, serif;
+
+    font-size: 28px;
+}
+
+
+.restaurant-reviews-empty > p:not(.restaurant-card-label) {
+    margin: 0 0 19px;
+
+    color: #777777;
+
+    font-size: 13px;
+
+    line-height: 1.5;
+}
+
+
+.restaurant-reviews-empty a {
+    display: inline-block;
+
+    padding: 10px 16px;
+
+    background-color: #202020;
+
+    border-radius: 9px;
+
+    color: #ffffff;
+
+    font-size: 12px;
+
+    font-weight: 800;
+
+    text-decoration: none;
+}
+
+
+.restaurant-reviews-empty a:hover {
+    background-color: #000000;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    .restaurant-reviews-page {
+        padding: 14px;
+    }
+
+
+    .restaurant-reviews-shell {
+        min-height: calc(100vh - 28px);
+
+        border-radius: 22px;
+    }
+
+
+    .restaurant-reviews-content {
+        padding: 35px 20px;
+    }
+
+
+    .restaurant-rating-summary {
+        grid-template-columns: 1fr;
+    }
+
+
+    .restaurant-rating-count-card {
+        width: 100%;
+    }
+
+
+    .restaurant-review-list-heading {
+        align-items: flex-start;
+
+        flex-direction: column;
+    }
+
+
+    .restaurant-review-top {
+        flex-direction: column;
+    }
+
+
+    .restaurant-review-date {
+        white-space: normal;
+    }
+
+
+    .restaurant-review-list {
+        max-height: none;
+
+        overflow: visible;
+    }
+}
+
+/* =========================================================
+   BROWSE RESTAURANTS - RATING
+   ========================================================= */
+
+.restaurant-name-rating {
+    display: flex;
+
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    gap: 10px;
+}
+
+
+.restaurant-name-rating h3 {
+    margin: 0;
+}
+
+
+/* Rating beside restaurant name */
+
+.restaurant-rating-preview {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 3px;
+
+    padding: 4px 8px;
+
+    background-color: #fff2e8;
+
+    border-radius: 20px;
+
+    font-size: 11px;
+}
+
+
+.restaurant-rating-star {
+    color: #ff7a21;
+
+    font-size: 14px;
+
+    line-height: 1;
+}
+
+
+.restaurant-rating-preview strong {
+    color: #202020;
+
+    font-size: 11px;
+}
+
+
+.restaurant-rating-count {
+    color: #888888;
+
+    font-size: 10px;
+}
+
+
+/* Restaurant with no ratings */
+
+.restaurant-rating-star.empty {
+    color: #aaaaaa;
+}
+
+
+.restaurant-rating-new {
+    color: #888888;
+
+    font-size: 10px;
+
+    font-weight: 700;
+}
+
+/* =========================================================
+   DELETE COUPON BUTTON
+   ========================================================= */
+
+.restaurant-coupon-delete-button {
+    margin-top: 12px;
+
+    padding: 8px 13px;
+
+    border: 1px solid #d9534f;
+    border-radius: 8px;
+
+    background-color: white;
+
+    color: #d9534f;
+
+    font-size: 11px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.restaurant-coupon-delete-button:hover {
+    background-color: #d9534f;
+
+    color: white;
+}

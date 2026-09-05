@@ -1,0 +1,92 @@
+PANDA FOODS - TESTING ACCOUNTS
+=================================
+
+CUSTOMER ACCOUNTS
+-----------------
+
+1. Customer1
+   Username: c1
+   Password: c1
+
+2. Customer2
+   Username: c2
+   Password: c2
+
+3. Customer3
+   Username: c3
+   Password: c3
+
+4. Customer4
+   Username: c4
+   Password: c4
+
+
+RESTAURANT ACCOUNTS - ORIGINAL
+------------------------------
+
+1. Burger Hub
+   Username: burger
+   Password: burger
+
+2. Ching Chong
+   Username: chn
+   Password: chn
+
+3. Meat Lovers
+   Username: meat
+   Password: meat
+
+4. Ramadan Special
+   Username: halal1
+   Password: halal1
+
+
+RESTAURANT ACCOUNTS - ADDITIONAL TEST DATA
+-------------------------------------------
+
+5. Dhaka Bites
+   Username: dhakabites
+   Password: dhakabites
+
+6. Spice Route
+   Username: spiceroute
+   Password: spiceroute
+
+7. Wok Station
+   Username: wokstation
+   Password: wokstation
+
+8. Green Bowl
+   Username: greenbowl
+   Password: greenbowl
+
+9. Urban Grill
+   Username: urbangrill
+   Password: urbangrill
+
+10. Halal Feast
+    Username: halalfeast
+    Password: halalfeast
+
+11. Street Bites
+    Username: streetbites
+    Password: streetbites
+
+12. Protein Point
+    Username: proteinpoint
+    Password: proteinpoint
+
+13. Gram Bangla Kitchen
+    Username: grambangla
+    Password: grambangla
+
+14. Pizza Corner
+    Username: pizzacorner
+    Password: pizzacorner
+
+
+NOTES
+-----
+- Select "Customer" when logging in with c1-c4.
+- Select "Restaurant" when logging in with any restaurant account.
+- The additional restaurant accounts above correspond to the bulk test-data SQL added for project testing.
