@@ -1,7 +1,7 @@
 # Panda Foods
 
 Panda Foods is a web-based food ordering system developed as a
-CSE370 Database Systems project.
+Database Systems course project.
 
 The system supports two types of users:
 
