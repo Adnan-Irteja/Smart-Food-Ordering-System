@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 30, 2026 at 08:44 PM
+-- Generation Time: Sep 06, 2026 at 04:15 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -55,7 +55,10 @@ INSERT INTO `coupons` (`coupon_id`, `discount_amount`, `coupon_code`, `restauran
 (14, 20.00, 'BANGLA20', 17),
 (15, 15.00, 'PIZZA15', 18),
 (16, 25.00, 'FEAST25', 18),
-(17, 20.00, 'ramadan20', 8);
+(17, 20.00, 'ramadan20', 8),
+(18, 14.00, 'WOK15', 11),
+(19, 10.00, 'Ching', 5),
+(20, 20.00, 'Chong', 5);
 
 -- --------------------------------------------------------
 
@@ -82,7 +85,7 @@ CREATE TABLE `customers` (
 --
 
 INSERT INTO `customers` (`login_id`, `name`, `username`, `password`, `email`, `phone`, `dob`, `house_no`, `street`, `area`, `foodPreference`) VALUES
-(1, 'Customer1', 'c1', 'c1', 'customer1@gmail.com', '0123456789', '2000-01-01', 'c1h', 'C1 Street', 'Customer Area', 'Fast Food'),
+(1, 'Customer1', 'customer1', 'c1', 'customer1@gmail.com', '0123456789', '2000-01-01', 'c12', 'C1 Street', 'Customer Area', 'Chinese'),
 (2, 'Customer2', 'c2', 'c2', 'customer2@gmail.com', '1234567890', '2000-01-01', 'c2h', 'C2 Street', 'Customer Area', 'Chinese'),
 (3, 'Customer3', 'c3', 'c3', 'customer3@gmail.com', '2345678901', '2001-01-01', 'c3h', 'C3 Street', 'Customer Area', 'Non-Vegan'),
 (7, 'Customer4', 'c4', 'c4', 'customer4@gmail.com', '0404040404', '2002-01-01', 'c4h', 'C4 Street', 'Customer Area', 'Halal');
@@ -114,7 +117,7 @@ INSERT INTO `fooditems` (`food_id`, `food_name`, `food_description`, `food_tag`,
 (3, 'Double Beef Burger', 'Double beef patty burger with cheese', 'Non-Vegan', 380.00, 1, 760, 4),
 (4, 'French Fries', 'Crispy salted french fries', 'Fast Food', 120.00, 1, 310, 4),
 (5, 'Chicken Nuggets', 'Six pieces of crispy chicken nuggets', 'Fast Food', 180.00, 0, 340, 4),
-(6, 'Chicken Fried Rice', 'Fried rice with chicken, egg and vegetables', 'Chinese', 280.00, 1, 540, 5),
+(6, 'Chicken Fried Rice', 'Fried rice with chicken, egg and vegetables', 'Chinese', 290.00, 1, 550, 5),
 (7, 'Beef Chow Mein', 'Stir-fried noodles with beef and vegetables', 'Chinese', 320.00, 1, 610, 5),
 (8, 'Sweet and Sour Chicken', 'Crispy chicken with sweet and sour sauce', 'Chinese', 350.00, 1, 580, 5),
 (9, 'Chicken Dumplings', 'Steamed chicken dumplings', 'Chinese', 200.00, 1, 300, 5),
@@ -207,7 +210,8 @@ INSERT INTO `fooditems` (`food_id`, `food_name`, `food_description`, `food_tag`,
 (96, 'Beef Kebab', 'Spiced beef kebab grilled until tender and flavorful', 'Extra Protein', 140.00, 1, 280, 8),
 (97, 'Chicken Kebab', 'Marinated chicken kebab grilled with traditional spices', 'Halal', 120.00, 1, 230, 8),
 (98, 'Special Lemon Drink', 'Refreshing house-made lemon drink served chilled', 'Drinks', 80.00, 1, 90, 8),
-(99, 'Water', 'Chilled bottled drinking water', 'Drinks', 25.00, 1, NULL, 8);
+(99, 'Water', 'Chilled bottled drinking water', 'Drinks', 25.00, 1, NULL, 8),
+(100, 'Beef Burger', 'Cheecy beef burger', 'Fast Food', 250.00, 1, NULL, 4);
 
 -- --------------------------------------------------------
 
@@ -232,7 +236,12 @@ INSERT INTO `orders` (`order_id`, `order_datetime`, `order_status`, `total_price
 (8, '2026-08-29 23:18:16', 'Confirmed', 250.00, 4, NULL),
 (9, '2026-08-29 23:18:43', 'Cancelled', 320.00, 5, NULL),
 (10, '2026-08-30 20:53:14', 'Confirmed', 840.00, 4, NULL),
-(11, '2026-08-30 22:08:24', 'Confirmed', 250.00, 4, NULL);
+(11, '2026-08-30 22:08:24', 'Confirmed', 250.00, 4, NULL),
+(12, '2026-09-02 15:38:33', 'Confirmed', 790.00, 11, NULL),
+(13, '2026-09-03 00:42:32', 'Pending', 468.00, 5, 19),
+(14, '2026-09-03 12:11:39', 'Confirmed', 877.20, 11, 18),
+(15, '2026-09-03 13:29:19', 'Pending', 390.00, 9, NULL),
+(16, '2026-09-05 11:33:52', 'Confirmed', 500.00, 4, NULL);
 
 -- --------------------------------------------------------
 
@@ -258,7 +267,16 @@ INSERT INTO `order_items` (`customer_id`, `food_id`, `order_id`, `quantity`, `un
 (1, 1, 11, 1, 250.00),
 (1, 2, 10, 1, 220.00),
 (1, 4, 10, 1, 120.00),
-(2, 7, 9, 1, 320.00);
+(1, 33, 14, 2, 300.00),
+(1, 35, 14, 1, 420.00),
+(2, 7, 9, 1, 320.00),
+(2, 7, 13, 1, 320.00),
+(2, 9, 13, 1, 200.00),
+(2, 17, 15, 1, 390.00),
+(2, 33, 12, 1, 300.00),
+(2, 34, 12, 1, 390.00),
+(2, 38, 12, 1, 100.00),
+(2, 100, 16, 2, 250.00);
 
 -- --------------------------------------------------------
 
@@ -321,7 +339,10 @@ CREATE TABLE `reviews` (
 --
 
 INSERT INTO `reviews` (`review_id`, `rating`, `comment`, `review_date`, `customer_id`, `restaurant_id`) VALUES
-(1, 5, 'Burgir 👍', '2026-08-30 23:50:41', 1, 4);
+(1, 5, 'Burgir 👍', '2026-08-30 23:50:41', 1, 4),
+(2, 4, 'Wok?', '2026-09-02 15:41:00', 2, 11),
+(3, 5, '👍', '2026-09-03 12:13:35', 1, 11),
+(4, 5, '', '2026-09-05 11:34:32', 2, 4);
 
 -- --------------------------------------------------------
 
@@ -341,7 +362,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`login_id`, `username`, `password`, `role`) VALUES
-(1, 'c1', 'c1', 'user'),
+(1, 'customer1', 'c1', 'user'),
 (2, 'c2', 'c2', 'user'),
 (3, 'c3', 'c3', 'user'),
 (4, 'burger', 'burger', 'restaurant_owner'),
@@ -431,25 +452,25 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `coupons`
 --
 ALTER TABLE `coupons`
-  MODIFY `coupon_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `coupon_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
 --
 -- AUTO_INCREMENT for table `fooditems`
 --
 ALTER TABLE `fooditems`
-  MODIFY `food_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=100;
+  MODIFY `food_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=101;
 
 --
 -- AUTO_INCREMENT for table `orders`
 --
 ALTER TABLE `orders`
-  MODIFY `order_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `order_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT for table `reviews`
 --
 ALTER TABLE `reviews`
-  MODIFY `review_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `review_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `users`
@@ -484,7 +505,7 @@ ALTER TABLE `fooditems`
 --
 ALTER TABLE `orders`
   ADD CONSTRAINT `orders_ibfk_1` FOREIGN KEY (`restaurant_id`) REFERENCES `restaurants` (`login_id`),
-  ADD CONSTRAINT `orders_ibfk_2` FOREIGN KEY (`coupon_id`) REFERENCES `coupons` (`coupon_id`);
+  ADD CONSTRAINT `orders_ibfk_2` FOREIGN KEY (`coupon_id`) REFERENCES `coupons` (`coupon_id`) ON DELETE SET NULL;
 
 --
 -- Constraints for table `order_items`
